@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Buckey Schedule Admin</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+    <div style="margin:auto;text-align:center">
+      <img src="/img/osu2014nc75.png" /><br/> 
+       <a href="javascript:getSchedule();" class="btn btn-default">Get Schedule</a>
+       <select id="selYear">
+           <option val="2015">2015</option>
+           <option val="2016">2016</option>
+       </select> 
+       <a href="javascript:addScheduleGame();" class="btn btn-default">Add Game</a>
+    </div>
+    <div id="schedule"></div>
+    <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.7.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
