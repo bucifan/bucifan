@@ -1,4 +1,4 @@
-﻿
+
 /*
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0px;
 	padding: 0;
-	background: #EDE7DB url('/images/img01.gif') repeat-x left top;
+	background: #EDE7DB url('/img/img01.gif') repeat-x left top;
 	text-align: justify;
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 11pt;
