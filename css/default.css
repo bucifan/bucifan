@@ -116,7 +116,7 @@ img.right {
 	margin: 0 auto;
 	height: 54px;
 	padding: 0px 20px;
-	background: url('/images/img02.png') repeat-x left top;
+	background: url('/img/img02.png') repeat-x left top;
 }
 
 #menu ul {
@@ -304,7 +304,7 @@ img.right {
 .sidebar li li {
 	margin: 0px 15px;
 	padding: 8px 0px;
-	background: url('CSS/images/img04.gif') repeat-x left bottom;
+	background: url('CSS/img/img04.gif') repeat-x left bottom;
 }
 
 
