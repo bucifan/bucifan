@@ -510,3 +510,13 @@ iframe .namePlate{ background-color:maroon;}
 .gameitem{
 	opacity: 0.0;
 }
+.schdate{
+	width: 100px;
+	font-weight: bold;
+}
+.schteam{
+	width: 300px;
+}
+.schtime{
+	width: 100px;
+}

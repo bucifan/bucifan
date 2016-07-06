@@ -1,6 +1,8 @@
 function loadScheduleItems(){
     var game1 = $("#gameitem1");
+    var game2 = $("#gameitem2");
     TweenLite.to(game1,3,{opacity:1.0});
+    TweenLite.to(game2,3,{opacity:1.0, delay:2});
 }
 /*
 $(document).on('ready', function () {
