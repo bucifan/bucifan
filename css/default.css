@@ -501,3 +501,8 @@ iframe .namePlate{ background-color:maroon;}
 .Quotes input {
     width:250px;
 }
+.schedule2016 {
+    background: url('/img/osu2014nc1.PNG') no-repeat center center;
+    width:500px;
+    height:500px;
+}
