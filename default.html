@@ -12,6 +12,10 @@
         window.location = "defaultm.html";
     }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/DirectionalRotationPlugin.min.js"></script>
 </head>
 <body>
     <div id="loader" class="introLoading"></div>
@@ -63,7 +67,7 @@
                             </p> </p>
                         </div> 
                         <div style="text-align:center" class='schedule2016'>
-                           
+                           <div id="gameitem1" class="gameitem">Game 1 display</div>
                         </div>
                     </div>
                     <!-- end content -->
@@ -83,38 +87,6 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.introLoader.pack.min.js"></script>
-    <script type="text/javascript">
-        $(document).on('ready', function () {
-            $("#loader").introLoader({
-                animation: {
-                    name: 'lettersLoader',
-                    options: {
-                        ease: "easeInOutCirc",
-                        style: 'light',
-                        delayBefore: 100,
-                        delayAfter: 0,
-                        exitTime: 100,
-                        loaderText: 'Go Buckeyes! 2014 National Football Champions!',
-                        lettersDelayTime: 0
-                    }
-                },
-                spinJs: { lines: 13, // The number of lines to draw 
-                    length: 20, // The length of each line 
-                    width: 10, // The line thickness 
-                    radius: 30, // The radius of the inner circle 
-                    corners: 1, // Corner roundness (0..1) 
-                    color: '#fff', // #rgb or #rrggbb or array of colors 
-                } 
-            });
-        });
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-try{
-var pageTracker = _gat._getTracker("UA-5305311-1");
-pageTracker._trackPageview();
-} catch(err) {}
-    </script>
+    <script src="js/bucifan-main.js"></script>
 </body>
 </html>

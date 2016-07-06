@@ -505,4 +505,8 @@ iframe .namePlate{ background-color:maroon;}
     background: url('/img/osu2014nc1.PNG') no-repeat center center;
     width:500px;
     height:500px;
+	margin:auto;
+}
+.gameitem{
+	opacity: 0.0;
 }
