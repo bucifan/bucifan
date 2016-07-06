@@ -5,3 +5,8 @@ body{
 #schedule{
     display: none;
 }
+.2016schedule{
+    background: url('/img/osu2014nc1.PNG') no-repeat center center;
+    width:500px;
+    height:500px;
+}
