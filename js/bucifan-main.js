@@ -2,8 +2,9 @@ function loadScheduleItems(){
     var game1 = $("#gameitem1");
     TweenLite.to(game1,3,{opacity:1.0});
 }
-
+/*
 $(document).on('ready', function () {
+
     $("#loader").introLoader({
         animation: {
             name: 'lettersLoader',
@@ -28,4 +29,5 @@ $(document).on('ready', function () {
         }
     });
 
-});
+}); */
+setTimeout(loadScheduleItems, 1000);
