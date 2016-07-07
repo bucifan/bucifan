@@ -509,9 +509,9 @@ iframe .namePlate{ background-color:maroon;}
 	border-radius: 5px;
 }
 .gameitem{
-	opacity: 0.0;
+	opacity: 1.0;
 	position: relative;
-	top:-100;
+	text-align: center;
 }
 .schdate{
 	width: 120px;
@@ -523,6 +523,8 @@ iframe .namePlate{ background-color:maroon;}
 	width: 200px;
 	display: inline-block;
 	text-align: left;
+	color:black;
+	font-weight: bold;
 
 }
 .schtime{
@@ -534,7 +536,7 @@ iframe .namePlate{ background-color:maroon;}
 }
 .scheduleHdr{
 	background: maroon;
-	width:420px;
+	width:100%;
 	color:white;
 	padding: 5px;
 	font-weight: bold; 
