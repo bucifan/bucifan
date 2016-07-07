@@ -509,7 +509,7 @@ iframe .namePlate{ background-color:maroon;}
 	border-radius: 5px;
 }
 .gameitem{
-	opacity: 1.0;
+	opacity: 0.0;
 	position: relative;
 	text-align: center;
 }
