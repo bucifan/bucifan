@@ -504,11 +504,14 @@ iframe .namePlate{ background-color:maroon;}
 .schedule2016 {
     background: url('/img/osu2014nc2.PNG') no-repeat center center;
     width:500px;
-    height:500px;
 	margin:auto;
+	border: 1px maroon solid;
+	border-radius: 5px;
 }
 .gameitem{
 	opacity: 0.0;
+	position: relative;
+	top:-100;
 }
 .schdate{
 	width: 120px;
@@ -528,4 +531,11 @@ iframe .namePlate{ background-color:maroon;}
 	color:red;
 	text-align: left;
 
+}
+.scheduleHdr{
+	background: maroon;
+	width:420px;
+	color:white;
+	padding: 5px;
+	font-weight: bold; 
 }
