@@ -511,12 +511,16 @@ iframe .namePlate{ background-color:maroon;}
 	opacity: 0.0;
 }
 .schdate{
-	width: 100px;
+	width: 150px;
 	font-weight: bold;
+	display: inline-block;
 }
 .schteam{
 	width: 300px;
+	display: inline-block;
 }
 .schtime{
 	width: 100px;
+	display: inline-block;
+	color:red;
 }
