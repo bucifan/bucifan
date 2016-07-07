@@ -511,16 +511,21 @@ iframe .namePlate{ background-color:maroon;}
 	opacity: 0.0;
 }
 .schdate{
-	width: 150px;
+	width: 120px;
 	font-weight: bold;
 	display: inline-block;
+	text-align: left;
 }
 .schteam{
-	width: 300px;
+	width: 200px;
 	display: inline-block;
+	text-align: left;
+
 }
 .schtime{
 	width: 100px;
 	display: inline-block;
 	color:red;
+	text-align: left;
+
 }
