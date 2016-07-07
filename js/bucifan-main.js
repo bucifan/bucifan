@@ -11,18 +11,18 @@ function loadScheduleItems(){
     var game10 = $("#gameitem10");
     var game11 = $("#gameitem11");
     var game12 = $("#gameitem12");
-    TweenLite.from(game1,1,{opacity:0.0, y:100});
-    TweenLite.from(game2,1,{opacity:0.0, y:100, delay:.5});
-    TweenLite.from(game3,1,{opacity:0.0, y:100, delay:1});
-    TweenLite.from(game4,1,{opacity:0.0, y:100, delay:1.5});
-    TweenLite.from(game5,1,{opacity:0.0, y:100, delay:2});
-    TweenLite.from(game6,1,{opacity:0.0, y:100, delay:2.5});
-    TweenLite.from(game7,1,{opacity:0.0, y:100, delay:3});
-    TweenLite.from(game8,1,{opacity:0.0, y:100, delay:3.5});
-    TweenLite.from(game9,1,{opacity:0.0, y:100, delay:4});
-    TweenLite.from(game10,1,{opacity:0.0, y:100, delay:4.5});
-    TweenLite.from(game11,1,{opacity:0.0, y:100, delay:5});
-    TweenLite.from(game12,1,{opacity:0.0, y:100, delay:5.5});
+    TweenLite.to(game1,1,{opacity:1.0});
+    TweenLite.to(game2,1,{opacity:1.0,  delay:.5});
+    TweenLite.to(game3,1,{opacity:1.0,  delay:1});
+    TweenLite.to(game4,1,{opacity:1.0,  delay:1.5});
+    TweenLite.to(game5,1,{opacity:1.0,  delay:2});
+    TweenLite.to(game6,1,{opacity:1.0,  delay:2.5});
+    TweenLite.to(game7,1,{opacity:1.0,  delay:3});
+    TweenLite.to(game8,1,{opacity:1.0,  delay:3.5});
+    TweenLite.to(game9,1,{opacity:1.0,  delay:4});
+    TweenLite.to(game10,1,{opacity:1.0,  delay:4.5});
+    TweenLite.to(game11,1,{opacity:1.0,  delay:5});
+    TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
 }
 /*
 $(document).on('ready', function () {
