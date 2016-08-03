@@ -65,18 +65,27 @@ function nextFlashCard(){
      testCount++; 
      $("#flashcardmodal").modal('hide');
 }
-
+var hintlevel = 1;
 function formatFC(){
+    hintlevel = 1; 
     var rdmpick = Math.floor((Math.random() * players.length));
     var rdmnn = Math.floor((Math.random() * 2)+1);
-    var modalHTML="Card number: "+ testCount + + " | "+ rdmpick;
+    var modalHTML="<span class='cardcnt'> Card number: "+ testCount +"</span><div class='cluediv'> <span>";
     var player = players[rdmpick];
+    var detailsHTML="";
+    var optionsHTML="<div><button class='btn' onclick='showhint();'> hint </button></div>";
     if(rdmnn<2){
-      modalHTML+="<br/> Number: " + player.number;
+      modalHTML+=" # </span> " + player.number + "</div>";
+      detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>"
     } else {
-       modalHTML+="<br/> Name : " + player.name;  
+       modalHTML+=" Name : " + player.name + "</div>";  
+       detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>"
     }
-    $(".modal-body").html(modalHTML);
+    $(".modal-body").html(modalHTML + detailsHTML);
+}
+function showhint(){
+  $("[data-hlevel='"+hintlevel+"']").slideDown();
+  hintlevel++;
 }
 
 $("#flashcardmodal").on('hidden.bs.modal', function(){
