@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Bucifan.com</title>
+    <meta name="keywords" content="" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+     <div>
+       <a class="btn"" href="javascript:startFlashCards();">Player Flash Cards</a>
+     </div>
+     
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="flashcardmodal">
+        <div class="modal-dialog modalFadeIn modal-dialog-center" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                   
+                </div>
+                <div class="modal-footer" style="text-align:center">
+                     <button type="button" class="btn btn-default" onclick='nextFlashCard();'>Next</button>
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<!-- /.modal -->
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.introLoader.pack.min.js"></script>
+    <script src="js/rosterObj.js"></script>    
+    <script src="js/bucifan-main.js"></script>
+</body>
+</html>
