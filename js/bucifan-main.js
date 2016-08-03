@@ -78,10 +78,10 @@ function formatFC(){
       modalHTML+=" # </span> " + player.number + "</div>";
       detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>"
     } else {
-       modalHTML+=" Name : " + player.name + "</div>";  
+       modalHTML+="Name : </span> " + player.name + "</div>";  
        detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>"
     }
-    $(".modal-body").html(modalHTML + detailsHTML);
+    $(".modal-body").html(modalHTML +optionsHTML +  detailsHTML);
 }
 function showhint(){
   $("[data-hlevel='"+hintlevel+"']").slideDown();

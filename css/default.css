@@ -568,6 +568,10 @@ iframe .namePlate{ background-color:maroon;}
 .modal-dialog-center {
     margin-top: 13%;
 }
+.modal-body div{
+	width: 100%;
+	text-align: center;
+}
 .cardcnt{
 	font-size: 8pt;
 	float: right;
@@ -582,3 +586,7 @@ iframe .namePlate{ background-color:maroon;}
 .cluediv span{
 	color:#c7cdd5;
 }
+.hint{
+	display: none;
+}
+
