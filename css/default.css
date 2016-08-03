@@ -541,3 +541,30 @@ iframe .namePlate{ background-color:maroon;}
 	padding: 5px;
 	font-weight: bold; 
 }
+@keyframes modalFadeIn {
+  0% {
+    transform: rotateX(90deg);
+    opacity:0;
+  }
+  40% {
+    transform: rotateX(0deg);
+    
+  }
+  100% {
+    opacity:1;
+  
+  }
+
+}
+.modalFadeIn {
+    -webkit-animation-duration: 2s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+	-webkit-animation-name: modalFadeIn;
+	animation-name: modalFadeIn;
+}  
+
+.modal-dialog-center {
+    margin-top: 13%;
+}

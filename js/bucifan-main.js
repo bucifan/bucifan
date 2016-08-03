@@ -53,3 +53,7 @@ $(document).on('ready', function () {
 
 }); */
 setTimeout(loadScheduleItems, 1000);
+
+function startFlashCards(){
+  $("#flashcardmodal").modal('show');
+}
