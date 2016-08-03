@@ -67,12 +67,12 @@ function nextFlashCard(){
 }
 
 function formatFC(){
-    $(".modal-body").html("Card number: "+ testCount);
+    var rdmpick = Math.floor((Math.random() * players.length) + 1);
+    $(".modal-body").html("Card number: "+ testCount + rdmpick);
 }
 
 $("#flashcardmodal").on('hidden.bs.modal', function(){
     if(nextFC){
-      testCount++;
       formatFC();
       $("#flashcardmodal").modal('show');
       nextFC = false;
