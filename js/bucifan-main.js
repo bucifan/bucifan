@@ -53,7 +53,28 @@ $(document).on('ready', function () {
 
 }); */
 setTimeout(loadScheduleItems, 1000);
-
+var nextFC = false;
+var testCount=0;
 function startFlashCards(){
+  testCount=0;
+  formatFC();
   $("#flashcardmodal").modal('show');
 }
+function nextFlashCard(){
+     nextFC =true;
+     testCount++; 
+     $("#flashcardmodal").modal('hide');
+}
+
+function formatFC(){
+    $(".modal-body").html("Card number: "+ testCount);
+}
+
+$("#flashcardmodal").on('hidden.bs.modal', function(){
+    if(nextFC){
+      testCount++;
+      formatFC();
+      $("#flashcardmodal").modal('show');
+      nextFC = false;
+    }
+} );
