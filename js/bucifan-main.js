@@ -67,8 +67,16 @@ function nextFlashCard(){
 }
 
 function formatFC(){
-    var rdmpick = Math.floor((Math.random() * players.length) + 1);
-    $(".modal-body").html("Card number: "+ testCount + rdmpick);
+    var rdmpick = Math.floor((Math.random() * players.length));
+    var rdmnn = Math.floor((Math.random() * 2)+1);
+    var modalHTML="Card number: "+ testCount + + " | "+ rdmpick;
+    var player = players[rdmpick];
+    if(rdmnn<2){
+      modalHTML+="<br/> Number: " + player.number;
+    } else {
+       modalHTML+="<br/> Name : " + player.name;  
+    }
+    $(".modal-body").html(modalHTML);
 }
 
 $("#flashcardmodal").on('hidden.bs.modal', function(){
