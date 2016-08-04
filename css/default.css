@@ -588,6 +588,7 @@ iframe .namePlate{ background-color:maroon;}
 }
 .hint{
 	display: none;
+	font-size: 15pt;
 }
 .cluedtl{}
 

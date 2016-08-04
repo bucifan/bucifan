@@ -68,6 +68,7 @@ function nextFlashCard(){
 }
 var hintlevel = 1;
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
+
 function getRandomPlayerID(){
     var rdmnn = Math.floor((Math.random() * 2)+1);
     if(localStorage.bypassString.indexOf(rdmnn+";")>0){
@@ -77,21 +78,22 @@ function getRandomPlayerID(){
     }  
 }
 
+var currplayerIndx=0; 
 function formatFC(){
     hintlevel = 1; 
     var rdmpick = Math.floor((Math.random() * players.length));
-    var rdmnn = getRandomPlayerID();
-    var player = players[rdmpick];
-    var modalHTML="<div><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
-    var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
+    currplayerIndx = getRandomPlayerID();
+    var player = players[currplayerIndx];
+    var modalHTML="<div style='height:35px;'><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
+    var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+" | Eligability: "+player.el+"|</div>";
     detailsHTML+= "<div class='hint' data-hlevel='2'> From: "+player.from +" | Height/Weight: " + player.hgt + " / " + player.wgt + "</div>";
     var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";
     if(rdmnn<2){
       modalHTML+=" # </span> " + player.number + "</div>";
-      detailsHTML+= "<div class='hint' data-hlevel='3'> Name: "+player.name+"</div>";
+      detailsHTML+= "<div class='hint cluediv' data-hlevel='3'> <span>Name: </span> "+player.name+"</div>";
     } else {
        modalHTML+="Name : </span> " + player.name + "</div>";  
-       detailsHTML+= "<div class='hint' data-hlevel='3'> Number: "+player.number+"</div>";
+       detailsHTML+= "<div class='hint cluediv' data-hlevel='3'><span> # </span>  "+player.number+"</div>";
     }
     $(".modal-body").html(modalHTML + optionsHTML + detailsHTML);
     
@@ -103,8 +105,16 @@ function showhint(){
 function gotit(){
     gotitCount++;
     $("[data-hlevel]").slideDown();
+    setTimeOut(nextFlashCard,4000);
 }
-
+function skipit(){
+    localStorage.bypassString+= currplayerIndx+";";
+    nextFlashCard();
+}
+function clearskip(){
+     localStorage.bypassString = "#";
+     nextFlashCard();
+}
 $("#flashcardmodal").on('hidden.bs.modal', function(){
     if(nextFC){
       formatFC();
@@ -112,3 +122,4 @@ $("#flashcardmodal").on('hidden.bs.modal', function(){
       nextFC = false;
     }
 } );
+
