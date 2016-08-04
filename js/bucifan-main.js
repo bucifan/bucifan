@@ -70,16 +70,16 @@ function formatFC(){
     hintlevel = 1; 
     var rdmpick = Math.floor((Math.random() * players.length));
     var rdmnn = Math.floor((Math.random() * 2)+1);
-    var modalHTML="<span class='cardcnt'> Card number: "+ testCount +"</span><div class='cluediv'> <span>";
+    var modalHTML="<div><span class='cardcnt'> player number: "+ testCount +"</span><div class='cluediv'> <span></div>";
     var player = players[rdmpick];
     var detailsHTML="";
-    var optionsHTML="<div><button class='btn' onclick='showhint();'> hint </button></div>";
+    var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";
     if(rdmnn<2){
       modalHTML+=" # </span> " + player.number + "</div>";
-      detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>"
+      detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
     } else {
        modalHTML+="Name : </span> " + player.name + "</div>";  
-       detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>"
+       detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
     }
     $(".modal-body").html(modalHTML +optionsHTML +  detailsHTML);
 }
