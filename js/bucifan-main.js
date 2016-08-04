@@ -107,7 +107,7 @@ function gotit(){
     setTimeout(nextFlashCard,4000);
 }
 function skipit(){
-    localStorage.bypassString+= "";
+    localStorage.bypassString+= currplayerIndx+";";
     nextFlashCard();
 }
 function clearskip(){
