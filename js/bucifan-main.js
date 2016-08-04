@@ -69,7 +69,7 @@ function nextFlashCard(){
 var hintlevel = 1;
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 function getRandomPlayerID(){
-    var rdmnn = Math.floor((Math.random() *  players.length);
+    var rdmnn = Math.floor((Math.random() *  players.length));
     if(localStorage.bypassString.indexOf(rdmnn+";")>0){
         getRandomPlayerID();
     } else{
