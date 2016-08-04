@@ -72,7 +72,7 @@ function formatFC(){
     var rdmpick = Math.floor((Math.random() * players.length));
     var rdmnn = Math.floor((Math.random() * 2)+1);
     var player = players[rdmpick];
-    var modalHTML="<div><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span></div>";
+    var modalHTML="<div class='cluediv'><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span></div>";
     var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
     detailsHTML+= "<div class='hint' data-hlevel='2'> From: "+player.from +" | Height/Weight: " + player.hgt + " / " + player.wgt + "</div>";
     var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";
