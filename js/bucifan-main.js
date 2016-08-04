@@ -55,6 +55,7 @@ $(document).on('ready', function () {
 setTimeout(loadScheduleItems, 1000);
 var nextFC = false;
 var testCount=0;
+var gotitCount=0;
 function startFlashCards(){
   testCount=0;
   formatFC();
@@ -70,22 +71,28 @@ function formatFC(){
     hintlevel = 1; 
     var rdmpick = Math.floor((Math.random() * players.length));
     var rdmnn = Math.floor((Math.random() * 2)+1);
-    var modalHTML="<div><span class='cardcnt'> player number: "+ testCount +"</span><div class='cluediv'> <span></div>";
     var player = players[rdmpick];
-    var detailsHTML="";
+    var modalHTML="<div><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span></div>";
+    var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
+    detailsHTML+= "<div class='hint' data-hlevel='2'> From: "+player.from +" | Height/Weight: " + player.hgt + " / " + player.wgt + "</div>";
     var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";
     if(rdmnn<2){
       modalHTML+=" # </span> " + player.number + "</div>";
-      detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
+      detailsHTML+= "<div class='hint' data-hlevel='3'> Name: "+player.name+"</div>";
     } else {
        modalHTML+="Name : </span> " + player.name + "</div>";  
-       detailsHTML = "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
+       detailsHTML+= "<div class='hint' data-hlevel='3'> Number: "+player.number+"</div>";
     }
-    $(".modal-body").html(modalHTML +optionsHTML +  detailsHTML);
+    $(".modal-body").html(modalHTML + optionsHTML + detailsHTML);
+    
 }
 function showhint(){
   $("[data-hlevel='"+hintlevel+"']").slideDown();
   hintlevel++;
+}
+function gotit(){
+    gotitCount++;
+    $("[data-hlevel]").slideDown();
 }
 
 $("#flashcardmodal").on('hidden.bs.modal', function(){
