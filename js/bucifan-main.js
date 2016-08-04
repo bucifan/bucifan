@@ -68,9 +68,8 @@ function nextFlashCard(){
 }
 var hintlevel = 1;
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
-
 function getRandomPlayerID(){
-    var rdmnn = Math.floor((Math.random() * 2)+1);
+    var rdmnn = Math.floor((Math.random() *  players.length);
     if(localStorage.bypassString.indexOf(rdmnn+";")>0){
         getRandomPlayerID();
     } else{
@@ -81,8 +80,8 @@ function getRandomPlayerID(){
 var currplayerIndx=0; 
 function formatFC(){
     hintlevel = 1; 
-    var rdmpick = Math.floor((Math.random() * players.length));
     currplayerIndx = getRandomPlayerID();
+    var rdmnn = Math.floor((Math.random() * 2)+1); ;
     var player = players[currplayerIndx];
     var modalHTML="<div style='height:35px;'><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
     var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+" | Eligability: "+player.el+"|</div>";
@@ -108,7 +107,7 @@ function gotit(){
     setTimeOut(nextFlashCard,4000);
 }
 function skipit(){
-    localStorage.bypassString+= currplayerIndx+";";
+    localStorage.bypassString+= "";
     nextFlashCard();
 }
 function clearskip(){
