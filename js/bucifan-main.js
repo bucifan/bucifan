@@ -67,12 +67,22 @@ function nextFlashCard(){
      $("#flashcardmodal").modal('hide');
 }
 var hintlevel = 1;
+if (!localStorage.bypassString) localStorage.bypassString = "#"; 
+function getRandomPlayerID(){
+    var rdmnn = Math.floor((Math.random() * 2)+1);
+    if(localStorage.bypassString.indexOf(rdmnn+";")>0){
+        getRandomPlayerID();
+    } else{
+      return rdmnn;
+    }  
+}
+
 function formatFC(){
     hintlevel = 1; 
     var rdmpick = Math.floor((Math.random() * players.length));
-    var rdmnn = Math.floor((Math.random() * 2)+1);
+    var rdmnn = getRandomPlayerID();
     var player = players[rdmpick];
-    var modalHTML="<div class='cluediv'><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span></div>";
+    var modalHTML="<div><span class='cardcnt'> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
     var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+"</div>";
     detailsHTML+= "<div class='hint' data-hlevel='2'> From: "+player.from +" | Height/Weight: " + player.hgt + " / " + player.wgt + "</div>";
     var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";

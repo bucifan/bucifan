@@ -15,7 +15,13 @@ var players = [
     {name: "Michael Hill", pos: "DT", el:"RSJR", number:77, from:"Pendleton, S.C. | Pendleton", hgt: 6.3 , wgt:295},
     {name: "Robert Landers", pos: "DT", el:"RSFR", number:57, from:"Dayton | Huber Heights", hgt: 6.2 , wgt:290},
     {name: "Tracy Sprinkle", pos: "DT", el:"RSJR", number:93, from:"Elyria | Elyria", hgt:6.3 , wgt:290},
-    {name: "last player", pos: "N", el:"N", number:0, from:" should not get selected by rdm number ", hgt:0 , wgt:0}
+    {name: "Jashon Cornell", pos: "DT", el:"RSFR", number:9, from:"St. Paul. Minn | Cretin-Derham Hall", hgt:6.3 , wgt:265},
+    {name: "Tyquan Lewis", pos: "DE", el:"RSJR", number:59, from:"Tarboro N.C. | Tarboro", hgt:6.4 , wgt:260},
+    {name: "Jalyn Holmes", pos: "DE", el:"JR", number:10, from:"Norfolk, Va. | Lake Taylor", hgt:6.5 , wgt:265},
+    {name: "Dante Booker", pos: "LB", el:"JR", number:33, from:"Akron | St. Vincent-St.Mary", hgt:6.3 , wgt:233},
+    {name: "Justin Hilliard", pos: "LB", el:"RSFR", number:47, from:"Cinicinnati | St. Xavier", hgt:6.2 , wgt:230},
+    {name: "Raekwon McMillan", pos: "LB", el:"JR", number:5, from:"Hinesville, Ga. | Liberty County", hgt:6.2 , wgt:240},
+    {name: "Nick Conner", pos: "LB", el:"RSFR", number:34, from:"Dublin | Scioto", hgt:6.3 , wgt:230},
 ]
 
 //    {name: "", pos: "", el:"", number:, from:" | ", hgt: , wgt:},
