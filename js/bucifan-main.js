@@ -100,7 +100,7 @@ function formatFC(){
     currplayerIndx = getRandomPlayerID();
     var rdmnn = Math.floor((Math.random() * 2)+1); ;
     var player = players[currplayerIndx];
-    var modalHTML="<div style='height:35px;'><span class='cardcnt'> <a href='javascript:popskip();'>*</a> | number only: <a href='javascript:toggleNumOption();' id='nolink'>temp</a> | offense/defense : <a href='javascript:toggleODOption;' id='odlink'>temp</a> |player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
+    var modalHTML="<div style='height:35px;'><span class='cardcnt'> <a href='javascript:popskip();'>*</a> | number only: <a href='javascript:toggleNumOption();' id='nolink'>temp</a> | offense/defense : <a href='javascript:toggleODOption;' id='odlink'>temp</a> |player number: "+ testCount +" | "+gotitCount+" </span></div><div class='cluediv'> <span>";
     var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+" | Eligability: "+player.el+"</div>";
     detailsHTML+= "<div class='hint' data-hlevel='2'> From: "+player.from +" | Height/Weight: " + player.hgt + " / " + player.wgt + "</div>";
     var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";
@@ -149,6 +149,7 @@ function toggleNumOption(){
     }
     setOptionsLinks();
 }
+
 function toggleODOption(){
     if(localStorage.OffDef == "X"){
         localStorage.NumberOption = "O";
@@ -161,6 +162,7 @@ function toggleODOption(){
     }    
     setOptionsLinks();
 }
+/*
 function setOptionsLinks(){
   switch (localStorage.OffDef) {
     case "X":
@@ -173,7 +175,7 @@ function setOptionsLinks(){
       $("#odlink").text("defense only");
       break;
   }
-   switch (localStorage.NumberOptio) {
+   switch (localStorage.NumberOption) {
     case "O":
       $("#odlink").text("off");
       break;
@@ -181,7 +183,7 @@ function setOptionsLinks(){
       $("#odlink").text("on");
       break;
   }
-} 
+} */
 setOptionsLinks(); 
 $("#flashcardmodal").on('hidden.bs.modal', function(){
     if(nextFC){
