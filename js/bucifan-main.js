@@ -116,7 +116,7 @@ function formatFC(){
        detailsHTML+= "<div class='cluediv hint' data-hlevel='3'><span> # </span>  "+player.number+"</div>";
     }
     $(".modal-body").html(modalHTML + optionsHTML + detailsHTML);
-    
+    setOptionsLinks(); 
 }
 function showhint(){
   if(hintlevel<4){    
@@ -153,12 +153,12 @@ function toggleNumOption(){
 
 function toggleODOption(){
     if(localStorage.OffDef == "X"){
-        localStorage.NumberOption = "O";
+        localStorage.OffDef = "O";
     } else {
         if(localStorage.OffDef == "O"){
-           localStorage.NumberOption = "D";
+           localStorage.OffDef = "D";
         } else {
-          localStorage.NumberOption = "X";
+          localStorage.OffDef= "X";
         }
     }    
     setOptionsLinks();
@@ -185,7 +185,7 @@ function setOptionsLinks(){
       break;
   }
 } 
-setOptionsLinks(); 
+
 $("#flashcardmodal").on('hidden.bs.modal', function(){
     if(nextFC){
       formatFC();
