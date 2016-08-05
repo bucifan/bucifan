@@ -90,7 +90,8 @@ function getRandomPlayerID(){
             } else {
                 getRandomPlayerID();
             }
-        }    
+        }
+      }
     }  
 }
 
@@ -162,7 +163,7 @@ function toggleODOption(){
     }    
     setOptionsLinks();
 }
-/*
+
 function setOptionsLinks(){
   switch (localStorage.OffDef) {
     case "X":
@@ -183,7 +184,7 @@ function setOptionsLinks(){
       $("#odlink").text("on");
       break;
   }
-} */
+} 
 setOptionsLinks(); 
 $("#flashcardmodal").on('hidden.bs.modal', function(){
     if(nextFC){
