@@ -576,6 +576,15 @@ iframe .namePlate{ background-color:maroon;}
 	font-size: 8pt;
 	float: right;
 }
+.cardcnt a:link{
+	color:#c10435;
+}
+.cardcnt a:visited{
+	color:#c10435;
+}
+.cardcnt a:hover{
+	color:#c7cdd5;
+}
 .cluediv{
 	font-size: 20pt;
 	width: 100%;
@@ -590,5 +599,5 @@ iframe .namePlate{ background-color:maroon;}
 	display: none;
 	font-size: 15pt;
 }
-.cluedtl{}
+
 
