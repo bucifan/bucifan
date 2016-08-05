@@ -22,6 +22,16 @@ var players = [
     {name: "Justin Hilliard", pos: "LB", el:"RSFR", number:47, from:"Cinicinnati | St. Xavier", hgt:6.2 , wgt:230},
     {name: "Raekwon McMillan", pos: "LB", el:"JR", number:5, from:"Hinesville, Ga. | Liberty County", hgt:6.2 , wgt:240},
     {name: "Nick Conner", pos: "LB", el:"RSFR", number:34, from:"Dublin | Scioto", hgt:6.3 , wgt:230},
+    {name: "Chris Worley", pos: "LB", el:"RSJR", number:35, from:"Cleveland | Glenville", hgt:6.2 , wgt:225},
+    {name: "Jerome Baker", pos: "LB", el:"SO", number:17, from:"Cleveland | St. Benedictine", hgt:6.2 , wgt:215},
+    {name: "Gareon Conley", pos: "CB", el:"RSJR", number:8, from:"Massillon | Washington", hgt:6.0 , wgt:195},
+    {name: "Damon Arnette", pos: "CB", el:"RSFR", number:13, from:"Fort Lauderdale, Fla. | St. Thomas Aquinas", hgt:6.0 , wgt:191},
+    {name: "Malik Hooker", pos: "SS", el:"RSSO", number:24, from:"New Castle, Pa | New Castle", hgt:6.2 , wgt:205},
+    {name: "Cam Burrows", pos: "SS", el:"RSJR", number:16, from:"Trotwood | Trotwood Madison", hgt:6.0 , wgt:208},
+    {name: "Erick Smith", pos: "FS", el:"JR", number:1, from:"Cleveland | Glenville", hgt:6.0 , wgt:202},
+    {name: "Damon Webb", pos: "FS", el:"JR", number:7, from:"Detroit  | Cass Tech", hgt: 5.11, wgt:193},
+    {name: "Marshon Lattimore", pos: "CB", el:"RSSO", number:2, from:"Cleveland | Glenville", hgt:6.0 , wgt:195},
+    {name: "Denzel Ward", pos: "CB", el:"SO", number:12, from:"Macedonia | Nordonia", hgt:5.11 , wgt:175}
 ]
 
 //    {name: "", pos: "", el:"", number:, from:" | ", hgt: , wgt:},

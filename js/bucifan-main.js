@@ -68,6 +68,7 @@ function nextFlashCard(){
 }
 var hintlevel = 1;
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
+if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 function getRandomPlayerID(){
     var rdmnn = Math.floor((Math.random() *  players.length));
     if(localStorage.bypassString.indexOf(rdmnn+";")>0){
@@ -83,10 +84,13 @@ function formatFC(){
     currplayerIndx = getRandomPlayerID();
     var rdmnn = Math.floor((Math.random() * 2)+1); ;
     var player = players[currplayerIndx];
-    var modalHTML="<div style='height:35px;'><span class='cardcnt'> <a href='javascript:popskip();'>*</a> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
+    var modalHTML="<div style='height:35px;'><span class='cardcnt'> <a href='javascript:popskip();'>*</a> <a href='javascript:toggleNumOption();'>number only</a> player number: "+ testCount +" | "+ gotitCount+" </span></div><div class='cluediv'> <span>";
     var detailsHTML= "<div class='hint' data-hlevel='1'> Position: "+player.pos+" | Eligability: "+player.el+"</div>";
     detailsHTML+= "<div class='hint' data-hlevel='2'> From: "+player.from +" | Height/Weight: " + player.hgt + " / " + player.wgt + "</div>";
     var optionsHTML="<div><button class='btn btn-danger' onclick='showhint();'> hint </button></div>";
+    if(localStorage.NumberOption == "1"){
+        rdmnn=0;
+    }
     if(rdmnn<2){
       modalHTML+=" # </span> " + player.number + "</div>";
       detailsHTML+= "<div class='cluediv hint' data-hlevel='3'> <span>Name: </span> "+player.name+"</div>";
@@ -98,8 +102,12 @@ function formatFC(){
     
 }
 function showhint(){
-  $("[data-hlevel='"+hintlevel+"']").slideDown();
-  hintlevel++;
+  if(hintlevel<4){    
+    $("[data-hlevel='"+hintlevel+"']").slideDown();
+    hintlevel++;
+  }  else {
+      nextFlashCard();
+  }
 }
 function gotit(){
     gotitCount++;
@@ -115,7 +123,14 @@ function clearskip(){
      nextFlashCard();
 }
 function popskip(){
-    alert(localStorage.bypassString);
+    alert(localStorage.bypassString + " | " + localStorage.NumberOption);
+}
+function toggleNumOption(){
+    if(localStorage.NumberOption == "0"){
+        localStorage.NumberOption = "1";
+    } else {
+        localStorage.NumberOption = "0";
+    }
 }
 $("#flashcardmodal").on('hidden.bs.modal', function(){
     if(nextFC){
