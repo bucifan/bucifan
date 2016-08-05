@@ -140,7 +140,7 @@ function clearskip(){
      nextFlashCard();
 }
 function popskip(){
-    alert(localStorage.bypassString + " | " + localStorage.NumberOption);
+    alert(localStorage.bypassString + " | " + localStorage.NumberOption+ " | " +localStorage.OffDef);
 }
 function toggleNumOption(){
     if(localStorage.NumberOption == "0"){
