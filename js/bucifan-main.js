@@ -178,10 +178,10 @@ function setOptionsLinks(){
   }
    switch (localStorage.NumberOption) {
     case "O":
-      $("#odlink").text("off");
+      $("#nolink").text("off");
       break;
     case "1":
-      $("#odlink").text("on");
+      $("#nolink").text("on");
       break;
   }
 } 
