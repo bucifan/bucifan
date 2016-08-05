@@ -78,14 +78,14 @@ function getRandomPlayerID(){
       if(localStorage.OffDef == "X"){
         return rdmnn;  
       } else {
-        if (localStorage.NumberOption = "O"){
-            if(players[rdmnn].OffDef="O"){
+        if (localStorage.OffDef=="O"){
+            if(players[rdmnn].OffDef=="O"){
                 return rdmnn;
             } else {
                 getRandomPlayerID();
             }
         } else {
-            if(players[rdmnn].OffDef="D"){
+            if(players[rdmnn].OffDef=="D"){
                 return rdmnn;
             } else {
                 getRandomPlayerID();
