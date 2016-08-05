@@ -177,7 +177,7 @@ function setOptionsLinks(){
       break;
   }
    switch (localStorage.NumberOption) {
-    case "O":
+    case "0":
       $("#nbrlink").text("off");
       break;
     case "1":
