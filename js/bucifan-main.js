@@ -71,27 +71,22 @@ if (!localStorage.bypassString) localStorage.bypassString = "#";
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X"; 
 function getRandomPlayerID(){
-    var rdmnn = Math.floor((Math.random() *  players.length));
-    if(localStorage.bypassString.indexOf(rdmnn+";")>0){
+   var rdmnn=0;
+   switch (localStorage.OffDef) {
+      case "X":
+        rdmnn = Math.floor((Math.random() *  players.length));
+        break;
+      case "O":
+         rdmnn = Math.floor((Math.random() *  10)); 
+         break;
+       case "D":  
+        rdmnn = Math.floor((Math.random() *  22)) + 10; 
+        break;
+   }  
+   if(localStorage.bypassString.indexOf(rdmnn+";")>0){
         getRandomPlayerID();
     } else{
-      if(localStorage.OffDef == "X"){
         return rdmnn;  
-      } else {
-        if (localStorage.OffDef=="O"){
-            if(players[rdmnn].OffDef=="O"){
-                return rdmnn;
-            } else {
-                getRandomPlayerID();
-            }
-        } else {
-            if(players[rdmnn].OffDef=="D"){
-                return rdmnn;
-            } else {
-                getRandomPlayerID();
-            }
-        }
-      }
     }  
 }
 
