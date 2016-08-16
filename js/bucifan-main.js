@@ -76,6 +76,7 @@ $('#rosterlookup').autocomplete({
         currplayerIndx = suggestion.data;
         formatFC();
         $("#flashcardmodal").modal('show');
+        $('#rosterlookup').val("");
      }
 });
 
