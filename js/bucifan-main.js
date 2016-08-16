@@ -56,6 +56,24 @@ setTimeout(loadScheduleItems, 1000);
 var nextFC = false;
 var testCount=0;
 var gotitCount=0;
+
+var hintlevel = 1;
+if (!localStorage.bypassString) localStorage.bypassString = "#"; 
+if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
+if (!localStorage.OffDef) localStorage.OffDef = "X";
+
+var playerAutoComplete = [];
+for(var i=0;i<players.length;i++){
+    playerAutoComplete.push(players[i].number +" | "+ players[i].name);
+} 
+
+$('#rosterlookup').autocomplete({
+    lookup: playerAutoComplete,
+    onSelect: function (suggestion) {
+        alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+    }
+});
+
 function startFlashCards(){
   testCount=0;
   formatFC();
@@ -66,10 +84,6 @@ function nextFlashCard(){
      testCount++; 
      $("#flashcardmodal").modal('hide');
 }
-var hintlevel = 1;
-if (!localStorage.bypassString) localStorage.bypassString = "#"; 
-if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
-if (!localStorage.OffDef) localStorage.OffDef = "X"; 
 function getRandomPlayerID(){
    var rdmnn=0;
    switch (localStorage.OffDef) {
