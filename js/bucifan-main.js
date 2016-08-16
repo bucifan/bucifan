@@ -57,7 +57,7 @@ var nextFC = false;
 var fromLU = false;
 var testCount=0;
 var gotitCount=0;
-
+var currplayerIndx=0; 
 var hintlevel = 1;
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
@@ -72,9 +72,10 @@ $('#rosterlookup').autocomplete({
     lookup: playerAutoComplete,
     onSelect: function (suggestion) {
         alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-        fromLU =true;
+        fromLU=true;
         currplayerIndx = suggestion.data;
         formatFC();
+        $("#flashcardmodal").modal('show');
      }
 });
 
@@ -108,7 +109,7 @@ function getRandomPlayerID(){
     }  
 }
 
-var currplayerIndx=0; 
+
 function formatFC(){
     hintlevel = 1; 
     if(!fromLU){
