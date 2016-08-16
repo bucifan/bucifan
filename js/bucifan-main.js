@@ -54,6 +54,7 @@ $(document).on('ready', function () {
 }); */
 setTimeout(loadScheduleItems, 1000);
 var nextFC = false;
+var fromLU = false;
 var testCount=0;
 var gotitCount=0;
 
@@ -64,14 +65,17 @@ if (!localStorage.OffDef) localStorage.OffDef = "X";
 
 var playerAutoComplete = [];
 for(var i=0;i<players.length;i++){
-    playerAutoComplete.push(players[i].number +" | "+ players[i].name);
+    playerAutoComplete.push({value: players[i].number +" | "+ players[i].name, data:i});
 } 
 
 $('#rosterlookup').autocomplete({
     lookup: playerAutoComplete,
     onSelect: function (suggestion) {
         alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
-    }
+        fromLU =true;
+        currplayerIndx = suggestion.data;
+        formatFC();
+     }
 });
 
 function startFlashCards(){
@@ -107,7 +111,9 @@ function getRandomPlayerID(){
 var currplayerIndx=0; 
 function formatFC(){
     hintlevel = 1; 
-    currplayerIndx = getRandomPlayerID();
+    if(!fromLU){
+      currplayerIndx = getRandomPlayerID();
+    }  
     var rdmnn = Math.floor((Math.random() * 2)+1); ;
     var player = players[currplayerIndx];
     var modalHTML="<div style='height:35px;'><span class='cardcnt'> <a href='javascript:popskip();'>*</a> | number only: <a href='javascript:toggleNumOption();' id='nbrlink'>temp</a> | offense/defense : <a href='javascript:toggleODOption();' id='odlink'>temp</a> |player number: "+ testCount +" | "+gotitCount+" </span></div><div class='cluediv'> <span>";
@@ -126,6 +132,10 @@ function formatFC(){
     }
     $(".modal-body").html(modalHTML + optionsHTML + detailsHTML);
     setOptionsLinks(); 
+    if(fromLU){
+      $("[data-hlevel]").slideDown();
+      fromLU = false;
+    }  
 }
 function showhint(){
   if(hintlevel<4){    
