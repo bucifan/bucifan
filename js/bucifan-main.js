@@ -71,7 +71,7 @@ for(var i=0;i<players.length;i++){
 $('#rosterlookup').autocomplete({
     lookup: playerAutoComplete,
     onSelect: function (suggestion) {
-        alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+        //alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
         fromLU=true;
         currplayerIndx = suggestion.data;
         formatFC();
