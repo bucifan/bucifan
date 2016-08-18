@@ -177,7 +177,9 @@ img.right {
 #page-bgbtm {
 	
 }
-
+.fcmain{
+	width:100%;text-align:center;margin-top:50px;
+}
 /* Latest Post */
 
 #latest-post {
