@@ -3,7 +3,10 @@
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait){
+    body{
+        width: 300px;
+    }
     .fcmain{
-	background: white;
+	   background: lightslategrey;
   }
 }
