@@ -1,5 +1,9 @@
 @media (max-width: 480px) {
-  .fcmain{
+
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+    .fcmain{
 	background: white;
   }
 }
