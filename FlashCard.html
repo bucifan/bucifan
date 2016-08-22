@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Bucifan.com</title>
@@ -8,44 +9,112 @@
     <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/media.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
+
 <body>
-     <div style="" class="fcmain">
-       <img src="img/bil.png"/><img src="img/bil.png"/><img src="img/bil.png"/>
-       <a class="btn" href="javascript:startFlashCards();" style='background:#c10435;color:white;margin:20px'>Player Flash Cards</a>
-       <img src="img/bil.png"/><img src="img/bil.png"/><img src="img/bil.png"/>
-       <br/><br/>
-       <b style='color:#F0F0F0;'> Lookup : </b> <input id='rosterlookup' />
-     </div>
-     
-    
+    <div style="" class="fcmain">
+        <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
+        <a class="btn" href="javascript:startFlashCards();" style='background:#c10435;color:white;margin:20px'>Player Flash Cards</a>
+        <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
+        <br/><br/>
+        <b style='color:#F0F0F0;'> Lookup : </b> <input id='rosterlookup' />
+    </div>
+
+
+    <div style="text-align:center" class='schedule2016'>
+        <div class="scheduleHdr"> 2016 Schedule </div>
+        <div id="gameitem1" class="gameitem">
+            <span class="schdate"> September 3 </span>
+            <span class="schteam"> <img src="/img/helmets/bowling_green1.png" />  Bowling Green </span>
+            <span class="schtime"> noon </span>
+        </div>
+        <div id="gameitem2" class="gameitem">
+            <span class="schdate"> September 10 </span>
+            <span class="schteam"> <img src="/img/helmets/tulsa1.png" />  Tulsa </span>
+            <span class="schtime"> 3:30 </span>
+        </div>
+        <div id="gameitem3" class="gameitem">
+            <span class="schdate"> September 17 </span>
+            <span class="schteam"> <img src="/img/helmets/oklahoma1.png" /> @ Oklahoma </span>
+            <span class="schtime"> 7:30 </span>
+        </div>
+        <div id="gameitem4" class="gameitem">
+            <span class="schdate"> October 1 </span>
+            <span class="schteam"> <img src="/img/helmets/rutgers1.png" />  Rutgers </span>
+            <span class="schtime"> noon </span>
+        </div>
+        <div id="gameitem5" class="gameitem">
+            <span class="schdate"> October 8 </span>
+            <span class="schteam"> <img src="/img/helmets/indiana1.png" />  Indiana </span>
+            <span class="schtime"> noon </span>
+        </div>
+        <div id="gameitem6" class="gameitem">
+            <span class="schdate"> October 15 </span>
+            <span class="schteam"> <img src="/img/helmets/wisconsin1.png" />  @ Wisconsin </span>
+            <span class="schtime"> 8:00 </span>
+        </div>
+        <div id="gameitem7" class="gameitem">
+            <span class="schdate"> October 22 </span>
+            <span class="schteam"> <img src="/img/helmets/penn_st1.png" />  @ Penn State </span>
+            <span class="schtime"> noon </span>
+        </div>
+        <div id="gameitem8" class="gameitem">
+            <span class="schdate"> October 29 </span>
+            <span class="schteam"> <img src="/img/helmets/northwestern1.png" />  Northwestern </span>
+            <span class="schtime"> 5:30 </span>
+        </div>
+        <div id="gameitem9" class="gameitem">
+            <span class="schdate"> November 5 </span>
+            <span class="schteam"> <img src="/img/helmets/nebraska1.png" />  Nebraska </span>
+            <span class="schtime"> 8:00 </span>
+        </div>
+        <div id="gameitem10" class="gameitem">
+            <span class="schdate"> November 12 </span>
+            <span class="schteam"> <img src="/img/helmets/maryland1.png" />  @ Maryland </span>
+            <span class="schtime"> noon </span>
+        </div>
+        <div id="gameitem11" class="gameitem">
+            <span class="schdate"> November 19 </span>
+            <span class="schteam"> <img src="/img/helmets/michigan_st1.png" />  Mich State </span>
+            <span class="schtime"> noon </span>
+        </div>
+        <div id="gameitem12" class="gameitem">
+            <span class="schdate"> November 26 </span>
+            <span class="schteam"> <img src="/img/helmets/michigan1.png" />  TTUN </span>
+            <span class="schtime"> noon </span>
+        </div>
+    </div>
+    </div>
+
+
     <div class="modal fade" tabindex="-1" role="dialog" id="flashcardmodal">
         <div class="modal-dialog modalFadeIn modal-dialog-center" role="document">
             <div class="modal-content">
-                
+
                 <div class="modal-body">
-                   
+
                 </div>
                 <div class="modal-footer" style="text-align:center">
                     <button type="button" class="btn btn-primary" onclick='clearskip();'>Clear Skips</button>
-                     <button type="button" class="btn btn-default" onclick='skipit();'>Add to Skip</button>
-                     <span style='padding:0px 8px'>|</span>
-                     <!--<button type="button" class="btn btn-danger" onclick='gotit();'>Got It</button>-->
-                     <button type="button" class="btn btn-default" onclick='nextFlashCard();'>Next</button>
-                     <span style='padding:0px 8px'>|</span>
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" onclick='skipit();'>Add to Skip</button>
+                    <span style='padding:0px 8px'>|</span>
+                    <!--<button type="button" class="btn btn-danger" onclick='gotit();'>Got It</button>-->
+                    <button type="button" class="btn btn-default" onclick='nextFlashCard();'>Next</button>
+                    <span style='padding:0px 8px'>|</span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
     </div>
-<!-- /.modal -->
+    <!-- /.modal -->
 
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.introLoader.pack.min.js"></script>
     <script src="js/jquery.autocomplete.min.js"></script>
-    <script src="js/rosterObj.js"></script>    
+    <script src="js/rosterObj.js"></script>
     <script src="js/bucifan-main.js"></script>
 </body>
+
 </html>
