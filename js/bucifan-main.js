@@ -24,34 +24,7 @@ function loadScheduleItems(){
     TweenLite.to(game11,1,{opacity:1.0,  delay:5});
     TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
 }
-/*
-$(document).on('ready', function () {
 
-    $("#loader").introLoader({
-        animation: {
-            name: 'lettersLoader',
-            onAfter: loadScheduleItems,
-            options: {
-                ease: "easeInOutCirc",
-                style: 'light',
-                delayBefore: 100,
-                delayAfter: 0,
-                exitTime: 100,
-                loaderText: 'Go Buckeyes! 2014 National Football Champions!',
-                lettersDelayTime: 0
-            }
-        },
-        spinJs: {
-            lines: 13, // The number of lines to draw 
-            length: 20, // The length of each line 
-            width: 10, // The line thickness 
-            radius: 30, // The radius of the inner circle 
-            corners: 1, // Corner roundness (0..1) 
-            color: '#fff', // #rgb or #rrggbb or array of colors 
-        }
-    });
-
-}); */
 setTimeout(loadScheduleItems, 1000);
 var nextFC = false;
 var fromLU = false;
@@ -59,9 +32,18 @@ var testCount=0;
 var gotitCount=0;
 var currplayerIndx=0; 
 var hintlevel = 1;
+var gameResults2016 = [];
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
+if (!localStorage.2016Results){
+    localStorage.2016Results = "{gamedata:[]};
+} else {
+   var lsGameData = JSON.parse(localStorage.2016Results);
+   gameResults2016 = lsGameData.gamedata; 
+} 
+
+alert(gameResults2016.length);
 
 var playerAutoComplete = [];
 for(var i=0;i<players.length;i++){

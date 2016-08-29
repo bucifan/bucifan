@@ -614,3 +614,8 @@ iframe .namePlate{ background-color:maroon;}
 
 input {  border: 1px solid #c10435;  }
 
+.gameitem:hover{
+	background:white;
+	color:red;
+}
+
