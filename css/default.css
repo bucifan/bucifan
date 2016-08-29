@@ -619,4 +619,15 @@ input {  border: 1px solid #c10435;  }
 	background:white;
 	color:red;
 }
+.gialt{
+	background:rgba(252,252,252,.4);
+}
+.gamedtl{
+	width:100%;
+	display:none;
+	text-align: center;
+}
+.gscore{
+	width:20px;
+}
 

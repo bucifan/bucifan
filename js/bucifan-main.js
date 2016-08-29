@@ -62,6 +62,12 @@ $('#rosterlookup').autocomplete({
      }
 });
 
+$(".gameitem").on('click',function(){
+   //$(this).find('.schtime').html(" OSU <input id='osuscr' class='gscore' /> ");  
+   $(this).after("<div class='gamedtl'> OSU <input id='osuscr' class='gscore' /> Opponent <input id='osuscr' class='gscore' /> </div>");
+   $(".gamedtl").slideDown();
+});
+
 function startFlashCards(){
   testCount=0;
   formatFC();
