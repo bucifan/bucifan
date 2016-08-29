@@ -37,7 +37,7 @@ if (!localStorage.bypassString) localStorage.bypassString = "#";
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
 if (!localStorage.gameResults){
-    localStorage.gameResults = JSON.stringify("{gamedata:[]}");
+    localStorage.gameResults = JSON.stringify("gamedata:[]");
 } else {
    var lsGameData = JSON.parse(localStorage.gameResults);
    gameResults2016 = lsGameData.gamedata; 
@@ -204,6 +204,6 @@ $("#flashcardmodal").on('hidden.bs.modal', function(){
 } );
 
 function clearGameData(){
-     localStorage.gameResults = JSON.stringify("{gamedata:[]}");
+     localStorage.gameResults = JSON.stringify("gamedata:[]");
 }
 
