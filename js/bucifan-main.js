@@ -37,9 +37,9 @@ if (!localStorage.bypassString) localStorage.bypassString = "#";
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
 if (!localStorage.gameResults){
-    localStorage.gameResults = "{gamedata:[]};
+    localStorage.gameResults = "{gamedata:[]}";
 } else {
-   var lsGameData = JSON.parse(localStorage.2016Results);
+   var lsGameData = JSON.parse(localStorage.gameResults);
    gameResults2016 = lsGameData.gamedata; 
 } 
 
