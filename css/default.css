@@ -514,6 +514,7 @@ iframe .namePlate{ background-color:maroon;}
 	opacity: 0.0;
 	position: relative;
 	text-align: center;
+	cursor:pointer;
 }
 .schdate{
 	width: 120px;

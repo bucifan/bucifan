@@ -36,8 +36,8 @@ var gameResults2016 = [];
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
-if (!localStorage.2016Results){
-    localStorage.2016Results = "{gamedata:[]};
+if (!localStorage.gameResults){
+    localStorage.gameResults = "{gamedata:[]};
 } else {
    var lsGameData = JSON.parse(localStorage.2016Results);
    gameResults2016 = lsGameData.gamedata; 
