@@ -623,11 +623,26 @@ input {  border: 1px solid #c10435;  }
 	background:rgba(252,252,252,.4);
 }
 .gamedtl{
-	width:100%;
+	width:90%;
 	display:none;
 	text-align: center;
+	background:#f7f7f7;
+	margin: 2px auto;
+	border: 1px red solid ;
+	border-radius:5px;
+	padding:4px;
 }
 .gscore{
 	width:20px;
+}
+.closedtl{
+	background:red;
+	color:white;
+	padding:2px 4px;
+	float:right;
+	margin-right:15px;
+	font-size:8pt;
+	border-radius:4px;
+	cursor:pointer;
 }
 

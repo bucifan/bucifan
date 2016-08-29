@@ -39,12 +39,11 @@ if (!localStorage.OffDef) localStorage.OffDef = "X";
 if (!localStorage.gameResults){
     localStorage.gameResults = JSON.stringify(gameResults2016);
 } else {
-   var lsGameData = JSON.parse(localStorage.gameResults);
-   gameResults2016 = lsGameData.gamedata; 
+   gameResults2016 = JSON.parse(localStorage.gameResults);
+   for(var i=0;i<gameResults2016.length;i++){
+      $("[data-opinit='"+gameResults2016[i].opp+"']").find(".schtime").html(" OSU: " +gameResults2016[i].osuscr + gameResults2016[i].opp + ": "+gameResults2016[i].oppsc);
+   }
 } 
-
-alert(gameResults2016.length);
-
 var playerAutoComplete = [];
 for(var i=0;i<players.length;i++){
     playerAutoComplete.push({value: players[i].number +" | "+ players[i].name, data:i});
@@ -63,8 +62,9 @@ $('#rosterlookup').autocomplete({
 });
 
 $(".gameitem").on('click',function(){
-   //$(this).find('.schtime').html(" OSU <input id='osuscr' class='gscore' /> ");  
-   $(this).after("<div class='gamedtl'> OSU <input id='osuscr' class='gscore' /> Opponent <input id='osuscr' class='gscore' /> </div>");
+   $(".gamedtl").remove();
+   $(this).after("<div class='gamedtl'> OSU <input id='osuscr' class='gscore' /> "+$(this).attr('data-opinit')+" <input id='oppscr' class='gscore' /> </div>");
+   $(".gamedtl").append("<div class='closedtl' onclick='closeGameDetails(\""+$(this).attr('data-opinit')+"\");'> close </div>")
    $(".gamedtl").slideDown();
 });
 
@@ -204,6 +204,23 @@ $("#flashcardmodal").on('hidden.bs.modal', function(){
 } );
 
 function clearGameData(){
+     gameResults2016 = [];
      localStorage.gameResults = JSON.stringify(gameResults2016);
 }
-
+function closeGameDetails(g){
+    //alert(g);
+    var fnd=false;
+    for(var i=0;i<gameResults2016.length;i++){
+        if(gameResults2016[i].opp==g){
+            fnd=true;
+            gameResults2016[i].oppsc=$("#oppscr").val();
+            gameResults2016[i].osusc=$("#osuscr").val();
+        }
+    }
+    if(!fnd){
+      gameResults2016.push({opp: g, oppsc: $("#oppscr").val(), osuscr: $("#osuscr").val()});
+    }
+   localStorage.gameResults = JSON.stringify(gameResults2016);
+   $("[data-opinit='"+g+"']").find(".schtime").html(" OSU: " + $("#osuscr").val() + g + ": "+$("#oppscr").val());
+   $(".gamedtl").slideUp(); 
+}
