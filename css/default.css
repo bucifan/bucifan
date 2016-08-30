@@ -531,10 +531,11 @@ iframe .namePlate{ background-color:maroon;}
 
 }
 .schtime{
-	width: 100px;
+	width: 150px;
 	display: inline-block;
 	color:red;
 	text-align: left;
+	white-space: nowrap;
 
 }
 .scheduleHdr{

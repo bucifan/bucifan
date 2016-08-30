@@ -210,17 +210,29 @@ function clearGameData(){
 function closeGameDetails(g){
     //alert(g);
     var fnd=false;
-    for(var i=0;i<gameResults2016.length;i++){
-        if(gameResults2016[i].opp==g){
-            fnd=true;
-            gameResults2016[i].oppsc=$("#oppscr").val();
-            gameResults2016[i].osusc=$("#osuscr").val();
-        }
+    var hasscore = true;
+    if($("#oppscr").val().length==0||$("#osuscr").val().length==0){
+        hasscore=false;
     }
-    if(!fnd){
+    
+        for (var i = 0; i < gameResults2016.length; i++) {
+            if (gameResults2016[i].opp == g) {
+                fnd = true;
+                if(hasscore){
+                  gameResults2016[i].oppsc = $("#oppscr").val();
+                  gameResults2016[i].osusc = $("#osuscr").val();
+                } else {
+                  gameResults2016[i].opp= "OLD";    
+                }  
+            }
+        }
+    
+    if(!fnd&&hasscore){
       gameResults2016.push({opp: g, oppsc: $("#oppscr").val(), osuscr: $("#osuscr").val()});
     }
    localStorage.gameResults = JSON.stringify(gameResults2016);
-   $("[data-opinit='"+g+"']").find(".schtime").html(" OSU: " + $("#osuscr").val() + g + ": "+$("#oppscr").val());
+   if(hasscore){
+     $("[data-opinit='"+g+"']").find(".schtime").html(" OSU: " + $("#osuscr").val() + g + ": "+$("#oppscr").val());
+   } 
    $(".gamedtl").slideUp(); 
 }
