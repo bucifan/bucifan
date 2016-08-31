@@ -252,3 +252,6 @@ function closeGameDetails(g){
    } 
    $(".gamedtl").slideUp(); 
 }
+function togSettings(){
+    $(".settings").slideToggle();
+}

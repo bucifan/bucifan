@@ -26,7 +26,7 @@ var players = [
     {TwoDeep: 1, OffDef: "D", name: "Justin Hilliard", pos: "LB", el:"RSFR", number:47, from:"Cinicinnati | St. Xavier", hgt:6.2 , wgt:230},
     {TwoDeep: 1, OffDef: "D", name: "Joe Burger", pos: "LB", el:"SR", number:48, from:"Cinicinnati | LaSalle", hgt:6.2 , wgt:230},
     {TwoDeep: 1, OffDef: "D", name: "Johnathan Cooper", pos: "DE", el:"FR", number:18, from:"Gahanna | Lincohn", hgt:6.3 , wgt:248},
-    {TwoDeep: 1, OffDef: "D", name: "DreMont Jones", pos: "DT", el:"RSFR", number:86, from:"Cleveland | St. Ignasius", hgt:5.10 , wgt:185},
+    {TwoDeep: 1, OffDef: "D", name: "DreMont Jones", pos: "DT", el:"RSFR", number:86, from:"Cleveland | St. Ignasius", hgt:6.3, wgt:280},
     {TwoDeep: 1, OffDef: "D", name: "Davon Hamilton", pos: "DT", el:"RSFR", number:53, from:"Pickerington | Pickerington Central", hgt:6.4 , wgt:297},
     {TwoDeep: 1, OffDef: "D", name: "Raekwon McMillan", pos: "LB", el:"JR", number:5, from:"Hinesville, Ga. | Liberty County", hgt:6.2 , wgt:240},
     {TwoDeep: 1, OffDef: "D", name: "Nick Conner", pos: "LB", el:"RSFR", number:34, from:"Dublin | Scioto", hgt:6.3 , wgt:230},

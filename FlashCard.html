@@ -15,16 +15,19 @@
 </head>
 
 <body>
+    <div id='settings' class='settings'>
+         <a href='javascript:clearGameData();' class="btn btn-danger" style='margin:auto'>Clear Game Data </a>
+    </div>
     <div style="" class="fcmain">
         <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
         <a class="btn" href="javascript:startFlashCards();" style='background:#c10435;color:white;margin:20px'>Player Flash Cards</a>
-        <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
+        <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/settings.png" onclick='togSettings();'/>
         <br/><br/>
         <b style='color:#F0F0F0;'> Player lookup : </b> <input id='rosterlookup' />
         <br/><br/>
      
      <!--<img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />-->
-</div>
+    </div>
     <div style="text-align:center" class='schedule2016' style="margin-top:15px;">
         <div class="scheduleHdr"> 
           <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" style="margin-right:20px;"/>
@@ -94,8 +97,7 @@
     </div>
     </div>
 
-   <a href='javascript:clearGameData();' class="btn btn-danger" style='margin:auto'>Clear Game Data </a>
-
+  
     <div class="modal fade" tabindex="-1" role="dialog" id="flashcardmodal">
         <div class="modal-dialog modalFadeIn modal-dialog-center" role="document">
             <div class="modal-content">
