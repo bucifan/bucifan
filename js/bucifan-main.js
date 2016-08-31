@@ -41,7 +41,16 @@ if (!localStorage.gameResults){
 } else {
    gameResults2016 = JSON.parse(localStorage.gameResults);
    for(var i=0;i<gameResults2016.length;i++){
-      $("[data-opinit='"+gameResults2016[i].opp+"']").find(".schtime").html(" OSU: " +gameResults2016[i].osuscr + gameResults2016[i].opp + ": "+gameResults2016[i].oppsc);
+      var scoreHTML ="<span style='font-family: Verdana, Geneva, sans-serif;color:#565e60'>";
+      if(parseInt(gameResults2016[i].osusc) > parseInt(gameResults2016[i].oppsc)){
+          scoreHTML+=" <b style='color:green'> W </b> ";
+      }  else {
+          alert(gameResults2016[i].osuscr);
+          alert(gameResults2016[i].oppscr);
+          scoreHTML+=" <b style='color:red'> L </b> ";
+      }
+      scoreHTML+=" OSU: " +gameResults2016[i].osusc + " " + gameResults2016[i].opp + ": "+gameResults2016[i].oppsc + "</span>";
+      $("[data-opinit='"+gameResults2016[i].opp+"']").find(".schtime").html(scoreHTML);
    }
 } 
 var playerAutoComplete = [];
@@ -228,11 +237,18 @@ function closeGameDetails(g){
         }
     
     if(!fnd&&hasscore){
-      gameResults2016.push({opp: g, oppsc: $("#oppscr").val(), osuscr: $("#osuscr").val()});
+      gameResults2016.push({opp: g, oppsc: $("#oppscr").val(), osusc: $("#osuscr").val()});
     }
    localStorage.gameResults = JSON.stringify(gameResults2016);
    if(hasscore){
-     $("[data-opinit='"+g+"']").find(".schtime").html(" OSU: " + $("#osuscr").val() + g + ": "+$("#oppscr").val());
+     var scoreHTML ="<span style='font-family: Verdana, Geneva, sans-serif;color:#565e60'>";
+     if(parseInt($("#osuscr").val()) > parseInt($("#oppscr").val())){
+          scoreHTML+=" <b style='color:green'> W </b> ";
+      }  else {
+          scoreHTML+=" <b style='color:red'> L </b> ";
+      }
+      scoreHTML+=" OSU: " +$("#osuscr").val() + " " + g + ": "+$("#oppscr").val()+ "</span>";
+      $("[data-opinit='"+g+"']").find(".schtime").html(scoreHTML);
    } 
    $(".gamedtl").slideUp(); 
 }
