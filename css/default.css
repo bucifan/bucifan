@@ -634,7 +634,8 @@ input {  border: 1px solid #c10435;  }
 	padding:4px;
 }
 .gscore{
-	width:20px;
+	width:30px;
+	margin-right: 8px;
 }
 .closedtl{
 	background:red;
@@ -651,4 +652,8 @@ input {  border: 1px solid #c10435;  }
 	padding: 10px;
 	text-align: center;
 	display: none;
+}
+.settingimg{
+	margin-left:18px;
+	cursor: pointer;
 }
