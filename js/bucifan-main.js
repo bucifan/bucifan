@@ -45,8 +45,8 @@ if (!localStorage.gameResults){
       if(parseInt(gameResults2016[i].osusc) > parseInt(gameResults2016[i].oppsc)){
           scoreHTML+=" <b style='color:green'> W </b> ";
       }  else {
-          alert(gameResults2016[i].osuscr);
-          alert(gameResults2016[i].oppscr);
+          //alert(gameResults2016[i].osuscr);
+          //alert(gameResults2016[i].oppscr);
           scoreHTML+=" <b style='color:red'> L </b> ";
       }
       scoreHTML+=" OSU: " +gameResults2016[i].osusc + " " + gameResults2016[i].opp + ": "+gameResults2016[i].oppsc + "</span>";
