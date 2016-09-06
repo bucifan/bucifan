@@ -270,7 +270,10 @@ function togSettings(){
 
 function switchDisplay(){
     if(currDisplay=="S"){
-         $(".schedule2016").slideUp(function(){ $(".rosterDiv").slideDown();});
+         $(".schedule2016").slideUp(function(){ 
+             $(".rosterDiv").show();
+             
+         });
          currDisplay="R";  
     } else {
       $(".rosterDiv").slideUp(function(){ $(".schedule2016").slideDown();});
