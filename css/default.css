@@ -511,7 +511,7 @@ iframe .namePlate{ background-color:maroon;}
 	border-radius: 5px;
 }
 .rosterDIV{
-    width:850px;
+    width:1000px;
 	margin:auto;
 	border: 1px maroon solid;
 	border-radius: 5px;
@@ -674,4 +674,4 @@ input {  border: 1px solid #c10435;  }
 .nobrk{
 	white-space: nowrap;
 }
-#rosterTable{width:950px;}
+
