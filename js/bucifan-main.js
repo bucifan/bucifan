@@ -272,10 +272,11 @@ function togSettings(){
 function switchDisplay(){
     if(currDisplay=="S"){
          $(".schedule2016").slideUp(function(){ $("#rosterDIV").slideDown();});
-        
+         $("#playerLookup").hide();
          currDisplay="R";  
     } else {
       $("#rosterDIV").slideUp(function(){ $(".schedule2016").slideDown();});
       currDisplay="S";
+       $("#playerLookup").show();
     }
 }
