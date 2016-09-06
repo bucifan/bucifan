@@ -33,6 +33,7 @@ var gotitCount=0;
 var currplayerIndx=0; 
 var hintlevel = 1;
 var gameResults2016 = [];
+var currDisplay = "S";
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
@@ -265,4 +266,14 @@ function closeGameDetails(g){
 }
 function togSettings(){
     $(".settings").slideToggle();
+}
+
+function switchDisplay(){
+    if(currDisplay=="S"){
+         $(".schedule2016").slideUp(function(){ $(".rosterDiv").slideDown();});
+         currDisplay="R";  
+    } else {
+      $(".rosterDiv").slideUp(function(){ $(".schedule2016").slideDown();});
+      currDisplay="S";
+    }
 }

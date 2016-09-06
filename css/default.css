@@ -515,8 +515,9 @@ iframe .namePlate{ background-color:maroon;}
 	margin:auto;
 	border: 1px maroon solid;
 	border-radius: 5px;
+	display: none;
 }
-.rosterDIV>table>th {
+th{
 	background: maroon;
 	width:100%;
 	color:white;
