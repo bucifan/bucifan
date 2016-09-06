@@ -516,6 +516,13 @@ iframe .namePlate{ background-color:maroon;}
 	border: 1px maroon solid;
 	border-radius: 5px;
 }
+.rosterDIV>table>th {
+	background: maroon;
+	width:100%;
+	color:white;
+	padding: 5px;
+	font-weight: bold; 
+}
 .gameitem{
 	opacity: 0.0;
 	position: relative;
@@ -662,4 +669,7 @@ input {  border: 1px solid #c10435;  }
 .settingimg{
 	margin-left:18px;
 	cursor: pointer;
+}
+.nobrk{
+	white-space: nowrap;
 }
