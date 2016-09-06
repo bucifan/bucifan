@@ -274,7 +274,7 @@ function switchDisplay(){
          $("#rosterDIV").show();
          currDisplay="R";  
     } else {
-      $("#rosterDiv").slideUp(function(){ $(".schedule2016").slideDown();});
+      $("#rosterDIV").slideUp(function(){ $(".schedule2016").slideDown();});
       currDisplay="S";
     }
 }
