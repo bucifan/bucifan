@@ -271,8 +271,8 @@ function togSettings(){
 
 function switchDisplay(){
     if(currDisplay=="S"){
-         $(".schedule2016").slideUp();
-         $("#rosterDIV").show();
+         $(".schedule2016").slideUp(function(){ $("#rosterDIV").slideDown();});
+        
          currDisplay="R";  
     } else {
       $("#rosterDIV").slideUp(function(){ $(".schedule2016").slideDown();});

@@ -674,3 +674,4 @@ input {  border: 1px solid #c10435;  }
 .nobrk{
 	white-space: nowrap;
 }
+#rosterTable{width:950px;}
