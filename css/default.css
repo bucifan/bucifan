@@ -510,6 +510,12 @@ iframe .namePlate{ background-color:maroon;}
 	border: 1px maroon solid;
 	border-radius: 5px;
 }
+.rosterDIV{
+    width:700px;
+	margin:auto;
+	border: 1px maroon solid;
+	border-radius: 5px;
+}
 .gameitem{
 	opacity: 0.0;
 	position: relative;

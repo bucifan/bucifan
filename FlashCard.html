@@ -6,6 +6,7 @@
     <title>Bucifan.com</title>
     <meta name="keywords" content="" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="css/media.css" rel="stylesheet" type="text/css" media="screen" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
@@ -96,6 +97,23 @@
         </div>
     </div>
     </div>
+    
+    <div id='rosterDIV'>
+        <table id='rosterTable'>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Number</th>
+                <th>Elg.</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>From</th>
+            </tr>
+        </thead>
+        <tbody id='rosterTableBody'></tbody>
+        </table>
+    </div>
 
   
     <div class="modal fade" tabindex="-1" role="dialog" id="flashcardmodal">
@@ -125,6 +143,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.introLoader.pack.min.js"></script>
     <script src="js/jquery.autocomplete.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/rosterObj.js"></script>
     <script src="js/bucifan-main.js"></script>
 </body>

@@ -54,9 +54,20 @@ if (!localStorage.gameResults){
    }
 } 
 var playerAutoComplete = [];
+var rosterHTML="";
 for(var i=0;i<players.length;i++){
     playerAutoComplete.push({value: players[i].number +" | "+ players[i].name, data:i});
+    rosterHTML+="<tr><td>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td><td>"+ players[i].hgt +"</td>><td>"+ players[i].hgt +"</td>><td>"+ players[i].from +"</td></tr>";    
 } 
+$("#rosterTableBody").append(rosterHTML);
+var alltktsDT = $("#rosterTable").DataTable({
+      "order": [[ 1, "desc"]],
+      "columnDefs": [
+        { "orderable": false, "targets": 0 }
+      ],
+      "pageLength": 25
+  });
+
 
 $('#rosterlookup').autocomplete({
     lookup: playerAutoComplete,
