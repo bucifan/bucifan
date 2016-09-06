@@ -61,7 +61,7 @@ for(var i=0;i<players.length;i++){
 } 
 $("#rosterTableBody").append(rosterHTML);
 var alltktsDT = $("#rosterTable").DataTable({
-      "order": [[ 1, "desc"]],
+      "order": [[ 2, "asc"]],
       "columnDefs": [
         { "orderable": false, "targets": 0 }
       ],
