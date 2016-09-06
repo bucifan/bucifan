@@ -63,12 +63,13 @@ for(var i=0;i<players.length;i++){
 $("#rosterTableBody").append(rosterHTML);
 var alltktsDT = $("#rosterTable").DataTable({
       "order": [[ 2, "asc"]],
+      "paging":   false,
       "columnDefs": [
         { "orderable": false, "targets": 0 }
       ],
       "pageLength": 25
   });
-
+$("div.toolbar").html('<b>Buckeye Players</b>');
 
 $('#rosterlookup').autocomplete({
     lookup: playerAutoComplete,
