@@ -58,7 +58,7 @@ var playerAutoComplete = [];
 var rosterHTML="";
 for(var i=0;i<players.length;i++){
     playerAutoComplete.push({value: players[i].number +" | "+ players[i].name, data:i});
-    rosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td><td>"+ players[i].hgt +"</td>><td>"+ players[i].hgt +"</td>><td class='nobrk'>"+ players[i].from +"</td></tr>";    
+    rosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td><td>"+ players[i].hgt +"</td>><td>"+ players[i].wgt +"</td>><td class='nobrk'>"+ players[i].from +"</td></tr>";    
 } 
 $("#rosterTableBody").append(rosterHTML);
 var alltktsDT = $("#rosterTable").DataTable({
