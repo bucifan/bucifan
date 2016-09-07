@@ -59,5 +59,5 @@ var players = [
     {TwoDeep: 1, OffDef: "O", name: "Demetrius Knox", pos: "OG", el:"SO", number:78, from:"Fort Worth, TX | All Saints Episcopal ", hgt:6.4 , wgt:308},
     {TwoDeep: 1, OffDef: "O", name: "Isiah Price", pos: "OT", el:"SO", number:59, from:"Greenbelt, Md. | Eleanor Roosevelt", hgt:6.7 , wgt:310},
     {TwoDeep: 1, OffDef: "O", name: "Brandon Bowen", pos: "OT", el:"RSFR", number:76, from:"Draper, Utah (Corner Canyon)", hgt:6.7 , wgt:315}
-
+]
 //    {TwoDeep: 0, OffDef: "O", name: "", pos: "", el:"", number:, from:" | ", hgt: , wgt:},
