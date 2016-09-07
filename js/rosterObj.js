@@ -54,7 +54,7 @@ var players = [
     {TwoDeep: 1, OffDef: "O", name: "Michael Jordan", pos: "OG", el:"FR", number:73, from:"Canton Mich. | Plymoth", hgt:6.7 , wgt:310},
     {TwoDeep: 1, OffDef: "O", name: "Matthew Burrell", pos: "OG", el:"FR", number:69, from:"Woodbridge Va. | Hylton", hgt:6.4 , wgt:305},
     {TwoDeep: 1, OffDef: "O", name: "Pat Elflein", pos: "C", el:"SR", number:65, from:"Pickerington | Pickerington North", hgt:6.3 , wgt:300},
-    {TwoDeep: 1, OffDef: "O", name: "Brady Taylor", pos: "C", el:"SO", number:79, from:"Columbus | Bishop Ready" hgt:6.5 , wgt:300},
+    {TwoDeep: 1, OffDef: "O", name: "Brady Taylor", pos: "C", el:"SO", number:79, from:"Columbus | Bishop Ready", hgt:6.5 , wgt:300},
     {TwoDeep: 1, OffDef: "O", name: "Billy Price", pos: "OG", el:"JR", number:54, from:"Austintown | Fitch", hgt:6.4 , wgt:315},
     {TwoDeep: 1, OffDef: "O", name: "Demetrius Knox", pos: "OG", el:"SO", number:78, from:"Fort Worth, TX | All Saints Episcopal ", hgt:6.4 , wgt:308},
     {TwoDeep: 1, OffDef: "O", name: "Isiah Price", pos: "OT", el:"SO", number:59, from:"Greenbelt, Md. | Eleanor Roosevelt", hgt:6.7 , wgt:310},
