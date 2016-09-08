@@ -24,7 +24,7 @@ function loadScheduleItems(){
     TweenLite.to(game11,1,{opacity:1.0,  delay:5});
     TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
 }
-
+$(".kkcountdown").kkcountdown();
 setTimeout(loadScheduleItems, 1000);
 var nextFC = false;
 var fromLU = false;
