@@ -674,4 +674,8 @@ input {  border: 1px solid #c10435;  }
 .nobrk{
 	white-space: nowrap;
 }
+.retirecd{
+	margin: 10px auto;
+	
+}
 
