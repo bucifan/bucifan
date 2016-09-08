@@ -678,9 +678,24 @@ input {  border: 1px solid #c10435;  }
 	margin: 10px auto;
     text-align: center;	
 }
-.kkc-days .kkc-hours .kkc-min .kkc-sec{
+.kkc-days{
 	font-weight: bold;
 	color:maroon;
-	marginn-right:4px;
+	margin-right:4px;
+}
+.kkc-hours{
+	font-weight: bold;
+	color:maroon;
+	margin-right:4px;
+}
+.kkc-min{
+	font-weight: bold;
+	color:maroon;
+	margin-right:4px;
+}
+.kkc-sec{
+	font-weight: bold;
+	color:maroon;
+	margin-right:4px;
 }
 
