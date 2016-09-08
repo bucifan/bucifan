@@ -676,6 +676,11 @@ input {  border: 1px solid #c10435;  }
 }
 .retirecd{
 	margin: 10px auto;
-	
+    text-align: center;	
+}
+.kkc-days .kkc-hours .kkc-min .kkc-sec{
+	font-weight: bold;
+	color:maroon;
+	marginn-right:4px;
 }
 
