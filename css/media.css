@@ -2,7 +2,7 @@
   body {
 	margin: 0px;
 	padding: 0;
-	background: white;
+	background: blue;
 	text-align: justify;
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 14pt;
@@ -12,13 +12,13 @@
 
 @media screen and (max-device-width: 480px) and (orientation: portrait){
 
-    html{
-        width: 300px;
-    }
-    .modal-dialog {
-         width: 300px;
-   }
-    .fcmain{
-	   background: lightslategrey;
+    body {
+	margin: 0px;
+	padding: 0;
+	background: white;
+	text-align: justify;
+	font-family:  Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #696969;
   }
 }
