@@ -62,7 +62,7 @@ for(var i=0;i<players.length;i++){
     rosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td><td>"+ players[i].hgt +"</td>><td>"+ players[i].wgt +"</td>><td class='nobrk'>"+ players[i].from +"</td></tr>";    
 }   MrosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td></tr>"; 
 $("#rosterTableBody").append(rosterHTML);
-$("#MrosterTableBody").append(rosterHTML);
+$("#MrosterTableBody").append(MrosterHTML);
 var alltktsDT = $("#rosterTable").DataTable({
       "order": [[ 2, "asc"]],
       "paging":   false,
