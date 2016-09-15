@@ -11,8 +11,7 @@
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait){
-
-    body {
+  body {
 	margin: 0px;
 	padding: 0;
 	background: white;
@@ -20,5 +19,9 @@
 	font-family:  Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 14pt;
 	color: #696969;
+  }
+  .schedule2016{
+      width: 100%;
+      margin: 0px 5px;
   }
 }
