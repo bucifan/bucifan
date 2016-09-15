@@ -56,7 +56,7 @@ if (!localStorage.gameResults){
 } 
 var playerAutoComplete = [];
 var rosterHTML="";
-var MrosterHTML
+var MrosterHTML="";
 for(var i=0;i<players.length;i++){
     playerAutoComplete.push({value: players[i].number +" | "+ players[i].name, data:i});
     rosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td><td>"+ players[i].hgt +"</td>><td>"+ players[i].wgt +"</td>><td class='nobrk'>"+ players[i].from +"</td></tr>";    
@@ -281,12 +281,13 @@ function togSettings(){
 
 function switchDisplay(){
     if(currDisplay=="S"){
-         $(".schedule2016").slideUp(function(){ $("#rosterDIV").slideDown();});
+         $(".schedule2016").slideUp(function(){ $("#rosterDIV").slideDown();$("#MrosterDIV").slideDown();});
          $("#playerLookup").hide();
          currDisplay="R";  
     } else {
       $("#rosterDIV").slideUp(function(){ $(".schedule2016").slideDown();});
       currDisplay="S";
        $("#playerLookup").show();
+      
     }
 }

@@ -517,6 +517,13 @@ iframe .namePlate{ background-color:maroon;}
 	border-radius: 5px;
 	display: none;
 }
+.MrosterDIV{
+    width:100%;
+	margin:auto;
+	border: 1px maroon solid;
+	border-radius: 5px;
+	display: none;
+}
 th{
 	background: maroon;
 	width:100%;
