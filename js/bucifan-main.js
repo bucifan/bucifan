@@ -56,11 +56,13 @@ if (!localStorage.gameResults){
 } 
 var playerAutoComplete = [];
 var rosterHTML="";
+var MrosterHTML
 for(var i=0;i<players.length;i++){
     playerAutoComplete.push({value: players[i].number +" | "+ players[i].name, data:i});
     rosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td><td>"+ players[i].hgt +"</td>><td>"+ players[i].wgt +"</td>><td class='nobrk'>"+ players[i].from +"</td></tr>";    
-} 
+}   MrosterHTML+="<tr><td class='nobrk'>"+ players[i].name +"</td><td>"+ players[i].pos +"</td><td>"+ players[i].number +"</td><td>"+ players[i].el +"</td></tr>"; 
 $("#rosterTableBody").append(rosterHTML);
+$("#MrosterTableBody").append(rosterHTML);
 var alltktsDT = $("#rosterTable").DataTable({
       "order": [[ 2, "asc"]],
       "paging":   false,
@@ -69,6 +71,14 @@ var alltktsDT = $("#rosterTable").DataTable({
       ],
       "pageLength": 25
   });
+var MalltktsDT = $("#MrosterTable").DataTable({
+      "order": [[ 2, "asc"]],
+      "paging":   false,
+      "columnDefs": [
+        { "orderable": false, "targets": 0 }
+      ],
+      "pageLength": 25
+  });  
 $("div.toolbar").html('<b>Buckeye Players</b>');
 
 $('#rosterlookup').autocomplete({
