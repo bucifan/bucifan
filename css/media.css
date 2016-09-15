@@ -21,8 +21,8 @@
 	color: #696969;
   }
   .schedule2016{
-      width: 90%;
-      margin: 0px auto;
+      width: 95%;
+      margin: 20px auto;
       font-size: 24pt;
      
   }
@@ -47,7 +47,7 @@
       display: none;
   }
   .settings{
-      disply:block;
+      display:block;
   }
   .settings a{
       font-size: 24pt;
