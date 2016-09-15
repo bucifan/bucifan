@@ -28,6 +28,7 @@
   }
   .schdate{
       width: 25%;
+      padding-bottom: 6px;
       
   }
   .schteam{
@@ -41,5 +42,14 @@
   }
   .mblRoster{
       display: block;
+  }
+  .fcmain{
+      display: none;
+  }
+  .settings{
+      disply:block;
+  }
+  .settings a{
+      font-size: 24pt;
   }
 }
