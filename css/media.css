@@ -24,4 +24,14 @@
       width: 100%;
       margin: 0px 5px;
   }
+  .schdate{
+      width: 25%;
+      
+  }
+  .schteam{
+      width:40%;
+  }
+  .schtime{
+      width: 34%;
+  }
 }
