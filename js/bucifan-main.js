@@ -24,6 +24,11 @@ function loadScheduleItems(){
     TweenLite.to(game11,1,{opacity:1.0,  delay:5});
     TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
 }
+
+$.getJSON("http://bucifan-api.azurewebsites.net/osugames")
+  .done(function(games){ alert("games loaded:" + games.y2016.length)})
+  .fail(function(){alert("get games error")});
+
 $(".kkcountdown").kkcountdown();
 setTimeout(loadScheduleItems, 1000);
 var nextFC = false;
