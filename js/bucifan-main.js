@@ -32,7 +32,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
           if((games.y2016[i].OSUScore==0)&&(games.y2016[i].OppScore==0)){
-              $("#gameitem"+i).append("<span class='schtime'>"+games.y2016[i].Start+"</span>");
+              $("#gameitem"+i).append("<span class='schtime'  data-at='0' >"+games.y2016[i].Start+"</span>");
           } else {
              var worl = "";
              if(games.y2016[i].OSUScore>games.y2016[i].OppScore){
@@ -40,7 +40,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
              } else {
                 worl = "<b style='color:red> L </b>"; 
              }
-             $("#gameitem"+i).append("<span class='schtime'>"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
+             $("#gameitem"+i).append("<span class='schtime' data-at='1' >"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
           }
           
       } 
