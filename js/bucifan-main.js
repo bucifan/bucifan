@@ -26,7 +26,15 @@ function loadScheduleItems(){
 }
 
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
-  .done(function(games){ alert("games loaded:" + games.y2016.length)})
+  .done(function(games){ 
+      for(var i=0;i<games.y2016.length;i++){
+          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"'></div>");
+          $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
+          $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
+          $("#gameitem"+i).append("<span class='schtime'>"+games.y2016[i].Start+"</span>");
+      } 
+      //alert("games loaded:" + games.y2016.length)
+  })
   .fail(function(){alert("get games error")});
 
 $(".kkcountdown").kkcountdown();
