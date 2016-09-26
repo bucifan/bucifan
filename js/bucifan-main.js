@@ -11,6 +11,7 @@ function loadScheduleItems(){
     var game10 = $("#gameitem9");
     var game11 = $("#gameitem10");
     var game12 = $("#gameitem11");
+    var game13 = $("#gameitem12");
     TweenLite.to(game1,1,{opacity:1.0});
     TweenLite.to(game2,1,{opacity:1.0,  delay:.5});
     TweenLite.to(game3,1,{opacity:1.0,  delay:1});
@@ -23,6 +24,7 @@ function loadScheduleItems(){
     TweenLite.to(game10,1,{opacity:1.0,  delay:4.5});
     TweenLite.to(game11,1,{opacity:1.0,  delay:5});
     TweenLite.to(game12,1,{opacity:1.0,  delay:5.5});
+    TweenLite.to(game13,1,{opacity:1.0,  delay:5.5});
 }
 
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
