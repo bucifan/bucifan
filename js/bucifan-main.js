@@ -31,14 +31,26 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
           $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"'></div>");
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
-          $("#gameitem"+i).append("<span class='schtime'>"+games.y2016[i].Start+"</span>");
+          if((games.y2016[i].OSUScore==0)&&(games.y2016[i].OppScore==0)){
+              $("#gameitem"+i).append("<span class='schtime'>"+games.y2016[i].Start+"</span>");
+          } else {
+             var worl = "";
+             if(games.y2016[i].OSUScore>games.y2016[i].OppScore){
+                worl = "<b style='color:green> W </b>";
+             } else {
+                worl = "<b style='color:red> L </b>"; 
+             }
+             $("#gameitem"+i).append("<span class='schtime'>"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
+          }
+          
       } 
       //alert("games loaded:" + games.y2016.length)
+      setTimeout(loadScheduleItems, 500);
   })
   .fail(function(){alert("get games error")});
 
 $(".kkcountdown").kkcountdown();
-setTimeout(loadScheduleItems, 1000);
+
 var nextFC = false;
 var fromLU = false;
 var testCount=0;
