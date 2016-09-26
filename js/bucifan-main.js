@@ -1,16 +1,16 @@
 function loadScheduleItems(){
-    var game1 = $("#gameitem1");
-    var game2 = $("#gameitem2");
-    var game3 = $("#gameitem3");
-    var game4 = $("#gameitem4");
-    var game5 = $("#gameitem5");
-    var game6 = $("#gameitem6");
-    var game7 = $("#gameitem7");
-    var game8 = $("#gameitem8");
-    var game9 = $("#gameitem9");
-    var game10 = $("#gameitem10");
-    var game11 = $("#gameitem11");
-    var game12 = $("#gameitem12");
+    var game1 = $("#gameitem0");
+    var game2 = $("#gameitem1");
+    var game3 = $("#gameitem2");
+    var game4 = $("#gameitem3");
+    var game5 = $("#gameitem4");
+    var game6 = $("#gameitem5");
+    var game7 = $("#gameitem6");
+    var game8 = $("#gameitem7");
+    var game9 = $("#gameitem8");
+    var game10 = $("#gameitem9");
+    var game11 = $("#gameitem10");
+    var game12 = $("#gameitem11");
     TweenLite.to(game1,1,{opacity:1.0});
     TweenLite.to(game2,1,{opacity:1.0,  delay:.5});
     TweenLite.to(game3,1,{opacity:1.0,  delay:1});
