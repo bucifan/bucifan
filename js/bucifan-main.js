@@ -36,9 +36,9 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
           } else {
              var worl = "";
              if(games.y2016[i].OSUScore>games.y2016[i].OppScore){
-                worl = "<b style='color:green> W </b>";
+                worl = "<b style='color:green'> W </b>";
              } else {
-                worl = "<b style='color:red> L </b>"; 
+                worl = "<b style='color:red'> L </b>"; 
              }
              $("#gameitem"+i).append("<span class='schtime' data-at='1' >"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
           }
