@@ -38,7 +38,7 @@
       width: 25%;
   }
   .stdRoster{
-      display: none;
+      /*display: none;*/
   }
   .mblRoster{
       display: block;
