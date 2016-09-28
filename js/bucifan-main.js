@@ -309,15 +309,24 @@ function togSettings(){
 }
 
 function switchDisplay(){
-    alert(window.screen.width);
-    if(currDisplay=="S"){
-         $(".schedule2016").slideUp(function(){ $("#rosterDIV").slideDown();$("#MrosterDIV").slideDown();});
-         $("#playerLookup").hide();
-         currDisplay="R";  
+    if (window.screen.width > 400) {
+        if (currDisplay == "S") {
+            $(".schedule2016").slideUp(function() {
+                $("#rosterDIV").slideDown();
+                $("#MrosterDIV").slideDown();
+            });
+            $("#playerLookup").hide();
+            currDisplay = "R";
+        }
+        else {
+            $("#rosterDIV").slideUp(function() {
+                $(".schedule2016").slideDown();
+            });
+            currDisplay = "S";
+            $("#playerLookup").show();
+
+        }
     } else {
-      $("#rosterDIV").slideUp(function(){ $(".schedule2016").slideDown();});
-      currDisplay="S";
-       $("#playerLookup").show();
-      
+        window.location ="mroster.html";
     }
 }
