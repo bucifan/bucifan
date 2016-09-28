@@ -309,6 +309,7 @@ function togSettings(){
 }
 
 function switchDisplay(){
+    alert(window.screen.width);
     if(currDisplay=="S"){
          $(".schedule2016").slideUp(function(){ $("#rosterDIV").slideDown();$("#MrosterDIV").slideDown();});
          $("#playerLookup").hide();
