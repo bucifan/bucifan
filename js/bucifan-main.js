@@ -44,8 +44,8 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
              }
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
              $("#gamedtl"+i).append("<div style='float:left'><b> Total Yards: </b> " + games.y2016[i].tyards + "<br/><b> Passing Yards: </b> " + games.y2016[i].pyards + "<br/><b> Rushing Yards: </b> " + games.y2016[i].ryards + "<br/></div>");
-             $("#gamedtl"+i).append("<div style='float:right'><b> Average Yards per play: </b> " + games.y2016[i].ypp + "<br/><b> Yards given up: </b> " + games.y2016[i].ygivenup + "<br/></div>");
-             $("#gamedtl"+i).append("<div style='width:100%'><b> Notes: </b> " + games.y2016[i].mynotes + "<br/></div>");
+             $("#gamedtl"+i).append("<div style='float:right'><b> Average Yards per play: </b> " + games.y2016[i].ypp + "<br/><b> Yards given up: </b> " + games.y2016[i].ygivenup + "<br/><br/></div>");
+             $("#gamedtl"+i).append("<br/><div style='width:100%'><b> Notes: </b> " + games.y2016[i].mynotes + "<br/></div>");
           }
           
       } 
