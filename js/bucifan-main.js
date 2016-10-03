@@ -30,7 +30,7 @@ function loadScheduleItems(){
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
   .done(function(games){ 
       for(var i=0;i<games.y2016.length;i++){
-          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls'></div> ");
+          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
           if((games.y2016[i].OSUScore==0)&&(games.y2016[i].OppScore==0)){
@@ -45,7 +45,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
              $("#gamedtl"+i).append("<div style='float:left'><b> Total Yards: </b> " + games.y2016[i].tyards + "<br/><b> Passing Yards: </b> " + games.y2016[i].pyards + "<br/><b> Rushing Yards: </b> " + games.y2016[i].ryards + "<br/></div>");
              $("#gamedtl"+i).append("<div style='float:right'><b> Average Yards per play: </b> " + games.y2016[i].ypp + "<br/><b> Yards given up: </b> " + games.y2016[i].ygivenup + "<br/><br/></div>");
-             $("#gamedtl"+i).append("<br/><div style='width:100%'><b> Notes: </b> " + games.y2016[i].mynotes + "<br/></div>");
+             $("#gamedtl"+i).append("<br/><div style='width:100%;text-align:left;display:block'><b> Notes: </b> " + games.y2016[i].mynotes + "<br/></div>");
           }
           
       } 
