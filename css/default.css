@@ -568,6 +568,15 @@ th{
 }
 .hidgamedtls{
 	display: none;
+	background-color: maroon;
+	color: white;
+	padding: 10px 5px;
+}
+.hidgamedtls div{
+  width: 49%;
+  display: inline;
+  padding-left: 20px;
+  text-align: left;
 }
 @keyframes modalFadeIn {
   0% {
