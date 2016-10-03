@@ -566,6 +566,9 @@ th{
 	padding: 5px;
 	font-weight: bold; 
 }
+.hidgamedtls{
+	display: none;
+}
 @keyframes modalFadeIn {
   0% {
     transform: rotateX(90deg);

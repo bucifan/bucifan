@@ -30,7 +30,7 @@ function loadScheduleItems(){
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
   .done(function(games){ 
       for(var i=0;i<games.y2016.length;i++){
-          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"'></div>");
+          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
           if((games.y2016[i].OSUScore==0)&&(games.y2016[i].OppScore==0)){
@@ -43,6 +43,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
                 worl = "<b style='color:red'> L </b>"; 
              }
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
+             $("#gamedtl"+i).append(" <b> Total Yards: </b> " + games.y2016[i].tyards + "<br/>")
           }
           
       } 
@@ -64,7 +65,8 @@ var currDisplay = "S";
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
-if (!localStorage.gameResults){
+
+/*if (!localStorage.gameResults){
     localStorage.gameResults = JSON.stringify(gameResults2016);
 } else {
    gameResults2016 = JSON.parse(localStorage.gameResults);
@@ -81,6 +83,7 @@ if (!localStorage.gameResults){
       $("[data-opinit='"+gameResults2016[i].opp+"']").find(".schtime").html(scoreHTML);
    }
 } 
+*/
 var playerAutoComplete = [];
 var rosterHTML="";
 var MrosterHTML="";
@@ -306,6 +309,9 @@ function closeGameDetails(g){
 }
 function togSettings(){
     $(".settings").slideToggle();
+}
+function toggledtls(i){
+   $("#gamedtl"+i).slideToggle();
 }
 
 function switchDisplay(){
