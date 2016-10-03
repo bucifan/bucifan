@@ -573,6 +573,7 @@ th{
 	padding: 10px 5px;
 }
 .hidgamedtls div{
+	position: relative;
   width: 49%;
   display: inline;
   padding-left: 20px;
