@@ -30,7 +30,7 @@ function loadScheduleItems(){
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
   .done(function(games){ 
       for(var i=0;i<games.y2016.length;i++){
-          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");></div> ");
+          $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
           if((games.y2016[i].OSUScore==0)&&(games.y2016[i].OppScore==0)){
