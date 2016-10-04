@@ -34,8 +34,8 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
   
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
-          if(i==12){
-              for(var j=0;j<11;j++){ 
+          if(i==11){
+              for(var j=0;j<5;j++){ 
                 $("#gamedtl"+i).append("<img src='/img/screwblueBrutusStompTSUN.gif'/>");
               }
           }
