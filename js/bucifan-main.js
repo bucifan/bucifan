@@ -349,9 +349,8 @@ function goblow(){
     $(".goblow-body").html("");
     var rdm = Math.floor((Math.random() *  30)); 
      $(".goblow-body").append("<img src='/img/goblow/goblow ("+rdm+").jpg' style='max-width:500px' id='goblowimg'/>");
-         $("#goblowmodal").modal('show');
-     var imgwidth = parseInt($("#goblowimg").width()) + 20;
-     alert(imgwidth);
-     $("#goblowcontent").width(imgwidth);
-
+     $("#goblowmodal").modal('show');
+     //var imgwidth = parseInt($("#goblowimg").width()) + 20;
+     //alert(imgwidth);
+     //$("#goblowcontent").width(imgwidth);
 }
