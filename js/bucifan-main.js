@@ -344,3 +344,10 @@ function switchDisplay(){
         window.location ="mroster.html";
     }
 }
+
+function goblow(){
+    $(".goblow-body").html("");
+    var rdm = Math.floor((Math.random() *  30)); 
+     $(".goblow-body").append("<img src='/img/goblow/goblow ("+rdm+").jpg' />");
+    $("#goblowmodal").modal('show');
+}

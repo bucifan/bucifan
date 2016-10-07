@@ -22,7 +22,7 @@
          <a href='javascript:switchDisplay();' class="btn btn-danger" style='margin:auto'>Switch to Roster </a>
     </div>
     <div style="" class="fcmain">
-         <img src="img/xmich.png"  onclick="xMich();"/><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
+         <img src="img/xmich.png"  onclick="goblow();" style='cursor:pointer'/><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" />
         <a class="btn" href="javascript:startFlashCards();" style='background:#c10435;color:white;margin:20px'>Player Flash Cards</a>
         <img src="img/bil.png" /><img src="img/bil.png" /><img src="img/bil.png" /><img src="img/Settings.png" onclick="togSettings();" class='settingimg'/>
         <br/><br/>
@@ -151,6 +151,19 @@
                     <button type="button" class="btn btn-default" onclick='nextFlashCard();'>Next</button>
                     <span style='padding:0px 8px'>|</span>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="goblowmodal">
+        <div class="modal-dialog modalFadeIn modal-dialog-center" role="document">
+            <div class="modal-content">
+                <div class="goblow-body">
+                    
                 </div>
             </div>
             <!-- /.modal-content -->
