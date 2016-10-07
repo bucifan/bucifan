@@ -349,7 +349,7 @@ function goblow(){
     $(".goblow-body").html("");
     var rdm = Math.floor((Math.random() *  30)); 
      $(".goblow-body").append("<img src='/img/goblow/goblow ("+rdm+").jpg' style='max-width:500px' id='goblowimg'/>");
-     var imgwidth = $("#goblowimg"?.width() + 20;
+     var imgwidth = $("#goblowimg").width() + 20;
      $("#goblowmodal").css("width") = imgwidth;
     $("#goblowmodal").modal('show');
 }
