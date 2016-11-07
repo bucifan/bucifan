@@ -35,7 +35,10 @@
       width:40%;
   }
   .schtime{
-      width: 25%;
+      width: 15%;
+  }
+  .schtime>span{
+    display: none;
   }
   .stdRoster{
       /*display: none;*/
