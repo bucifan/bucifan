@@ -29,7 +29,7 @@ function loadScheduleItems(){
 
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
   .done(function(games){ 
-      $(".fctop").append("<span style='padding-right:50px;'>Polls: </span>CFP: " + games.curCFP + " | AP: " + games.curAP + " | Coaches: "+ games.curCoaches)
+      $(".fctop").append("<span style='padding-right:30px;'>Polls: </span>CFP: " + games.curCFP + " | AP: " + games.curAP + " | Coaches: "+ games.curCoaches)
       var wins=0; loses=0;
       for(var i=0;i<games.y2016.length;i++){
           
