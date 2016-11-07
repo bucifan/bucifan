@@ -29,9 +29,11 @@ function loadScheduleItems(){
 
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
   .done(function(games){ 
+      $(".fctop").append("Polls: CFP: " + games.curCFP + " | AP: " + games.curAP + " | Coaches: "+ games.curCoaches)
+      var wins=0; loses=0;
       for(var i=0;i<games.y2016.length;i++){
+          
           $(".schedule2016").append("<div id='gameitem"+i+"' class='gameitem' data-opinit='"+games.y2016[i].OppShort+"' onclick='toggledtls("+i+");'></div><div id='gamedtl"+i+"' class='hidgamedtls' onclick='toggledtls("+i+");'></div> ");
-  
           $("#gameitem"+i).append("<span class='schdate'> "+games.y2016[i].date+"</span>");
           $("#gameitem"+i).append("<span class='schteam'> <img src='/img/helmets/"+games.y2016[i].Himg+"' />"+games.y2016[i].Opp+"</span>");
           if(i==11){
@@ -45,16 +47,18 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
              var worl = "";
              if(games.y2016[i].OSUScore>games.y2016[i].OppScore){
                 worl = "<b style='color:green'> W </b>";
+                wins++;
              } else {
                 worl = "<b style='color:red'> L </b>"; 
+                loses++;
              }
              $("#gameitem"+i).append("<span class='schtime' style='color:black' >"+worl+" OSU: " + games.y2016[i].OSUScore + " " + games.y2016[i].OppShort + ": "+games.y2016[i].OppScore+"</span>"); 
              $("#gamedtl"+i).append("<div style='float:left'><b> Total Yards: </b> " + games.y2016[i].tyards + "<br/><b> Passing Yards: </b> " + games.y2016[i].pyards + "<br/><b> Rushing Yards: </b> " + games.y2016[i].ryards + "<br/></div>");
              $("#gamedtl"+i).append("<div style='float:right'><b> Average Yards per play: </b> " + games.y2016[i].ypp + "<br/><b> Yards given up: </b> " + games.y2016[i].ygivenup + "<br/><br/></div>");
              $("#gamedtl"+i).append("<br/><div style='width:100%;text-align:left;display:block'><b> Notes: </b> " + games.y2016[i].mynotes + "<br/></div>");
           }
-          
       } 
+      $("#schedhdr").append( " : " + wins + " - " + loses + " ");
       //alert("games loaded:" + games.y2016.length)
       setTimeout(loadScheduleItems, 500);
   })
