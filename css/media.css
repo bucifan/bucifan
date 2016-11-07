@@ -50,10 +50,9 @@
       display: none;
   }
   .settings{
-      display:block;
+      display:none;
   }
   .settings a{
-      display: none;
       font-size: 24pt;
   }
 }
