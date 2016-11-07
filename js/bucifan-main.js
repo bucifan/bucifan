@@ -42,7 +42,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
               }
           }
           if((games.y2016[i].OSUScore==0)&&(games.y2016[i].OppScore==0)){
-              $("#gameitem"+i).append("<span class='schtime'  data-at='0' >"+games.y2016[i].Start+"</span>");
+              $("#gameitem"+i).append("<span class='schtime'  data-at='0' ><label>"+games.y2016[i].Start+"</label></span>");
           } else {
              var worl = "";
              if(games.y2016[i].OSUScore>games.y2016[i].OppScore){

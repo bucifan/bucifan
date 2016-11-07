@@ -24,7 +24,6 @@
       width: 95%;
       margin: 20px auto;
       font-size: 3em;
-     
   }
   .schdate{
       width: 15%;
@@ -37,6 +36,9 @@
   }
   .schtime{
       width: 10%;
+  }
+  .schtime>label{
+     font-size: 0.5em;
   }
   .schtime>span{
     display: none;
@@ -56,6 +58,7 @@
   .settings a{
       font-size: 24pt;
   }
+  
   .hidgamedtls{
     font-size: 0.5em;
     
