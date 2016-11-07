@@ -53,6 +53,7 @@
       display:block;
   }
   .settings a{
+      display: none;
       font-size: 24pt;
   }
 }
