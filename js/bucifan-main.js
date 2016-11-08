@@ -27,7 +27,7 @@ function loadScheduleItems(){
     TweenLite.to(game13,1,{opacity:1.0,  delay:5.5});
     
     var mwidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    alert("Width: "+ mwidth);
+    //alert("Width: "+ mwidth);
 }
 
 $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
