@@ -65,7 +65,8 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
       //alert("games loaded:" + games.y2016.length)
       setTimeout(loadScheduleItems, 500);
   })
-  .fail(function(){alert("get games error")});
+  .fail(function(){alert("get games error")}
+);
 
 $(".kkcountdown").kkcountdown();
 
@@ -267,19 +268,17 @@ function closeGameDetails(g){
     if($("#oppscr").val().length==0||$("#osuscr").val().length==0){
         hasscore=false;
     }
-    
-        for (var i = 0; i < gameResults2016.length; i++) {
-            if (gameResults2016[i].opp == g) {
-                fnd = true;
-                if(hasscore){
-                  gameResults2016[i].oppsc = $("#oppscr").val();
-                  gameResults2016[i].osusc = $("#osuscr").val();
-                } else {
-                  gameResults2016[i].opp= "OLD";    
-                }  
-            }
+    for (var i = 0; i < gameResults2016.length; i++) {
+        if (gameResults2016[i].opp == g) {
+            fnd = true;
+            if(hasscore){
+              gameResults2016[i].oppsc = $("#oppscr").val();
+              gameResults2016[i].osusc = $("#osuscr").val();
+            } else {
+              gameResults2016[i].opp= "OLD";    
+            }  
         }
-    
+    }
     if(!fnd&&hasscore){
       gameResults2016.push({opp: g, oppsc: $("#oppscr").val(), osusc: $("#osuscr").val()});
     }
@@ -331,7 +330,4 @@ function goblow(){
     var rdm = Math.floor((Math.random() *  30)); 
      $(".goblow-body").append("<img src='/img/goblow/goblow ("+rdm+").jpg' style='max-width:500px;box-shadow:5px 5px 5px white;' id='goblowimg'/>");
      $("#goblowmodal").modal('show');
-     //var imgwidth = parseInt($("#goblowimg").width()) + 20;
-     //alert(imgwidth);
-     //$("#goblowcontent").width(imgwidth);
 }
