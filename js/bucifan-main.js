@@ -77,25 +77,6 @@ var currDisplay = "S";
 if (!localStorage.bypassString) localStorage.bypassString = "#"; 
 if (!localStorage.NumberOption) localStorage.NumberOption = "0"; 
 if (!localStorage.OffDef) localStorage.OffDef = "X";
-
-/*if (!localStorage.gameResults){
-    localStorage.gameResults = JSON.stringify(gameResults2016);
-} else {
-   gameResults2016 = JSON.parse(localStorage.gameResults);
-   for(var i=0;i<gameResults2016.length;i++){
-      var scoreHTML ="<span style='font-family: Verdana, Geneva, sans-serif;color:#565e60'>";
-      if(parseInt(gameResults2016[i].osusc) > parseInt(gameResults2016[i].oppsc)){
-          scoreHTML+=" <b style='color:green'> W </b> ";
-      }  else {
-          //alert(gameResults2016[i].osuscr);
-          //alert(gameResults2016[i].oppscr);
-          scoreHTML+=" <b style='color:red'> L </b> ";
-      }
-      scoreHTML+=" OSU: " +gameResults2016[i].osusc + " " + gameResults2016[i].opp + ": "+gameResults2016[i].oppsc + "</span>";
-      $("[data-opinit='"+gameResults2016[i].opp+"']").find(".schtime").html(scoreHTML);
-   }
-} 
-*/
 var playerAutoComplete = [];
 var rosterHTML="";
 var MrosterHTML="";
@@ -115,14 +96,7 @@ var alltktsDT = $("#rosterTable").DataTable({
       responsive: true,
       "pageLength": 25
   });
-//var MalltktsDT = $("#MrosterTable").DataTable({
-//      "order": [[ 2, "asc"]],
-//      "paging":   false,
-//      "columnDefs": [
-//        { "orderable": false, "targets": 0 }
-//      ],
-//      "pageLength": 25
-//  });  
+ 
 $("div.toolbar").html('<b>Buckeye Players</b>');
 
 $('#rosterlookup').autocomplete({
