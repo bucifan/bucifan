@@ -63,7 +63,7 @@ $.getJSON("https://bucifan-api.azurewebsites.net/osugames")
       } 
       $("#schedhdr").append( " : " + wins + " - " + loses + " ");
        $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/osubb.html' class='btn btn-default'>OSU Basketball Schedule</a>");
-       $(".scheduleHdr").before("<a href='http://robroach.azurewebsites.net/flashcard.html' class='btn btn-default'>RobRoach Home</a>");
+       $(".scheduleHdr").before("<a href='http://www.roberoach.com' class='btn btn-default'> roberoach </a>");
       //alert("games loaded:" + games.y2016.length)
       setTimeout(loadScheduleItems, 500);
   })
